@@ -1,0 +1,3368 @@
+Last login: Tue Aug  8 22:15:04 on ttys001
+@hcardenas:~$ cd Documents/
+@hcardenas:Documents$ 
+@hcardenas:Documents$ cd UCF-Cooding-Boot-Camp/
+@hcardenas:UCF-Cooding-Boot-Camp$ ll
+total 0
+drwxr-xr-x  8 hcardenas  staff   272B Jul 13 12:26 05-2017-Class-Repository/
+drwxr-xr-x  7 hcardenas  staff   238B Jul 15 16:04 Train-Scheduler/
+drwxr-xr-x  7 hcardenas  staff   238B Jul 15 21:18 GifTastic/
+drwxr-xr-x  8 hcardenas  staff   272B Jul 25 23:19 FunWithRealEstate/
+drwxr-xr-x  9 hcardenas  staff   306B Aug  2 23:01 PetLocator/
+@hcardenas:UCF-Cooding-Boot-Camp$ git clone git@github.com:hcardenas/liri-node-app.git
+Cloning into 'liri-node-app'...
+Enter passphrase for key '/Users/hcardenas/.ssh/id_rsa': 
+remote: Counting objects: 8, done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 8 (delta 0), reused 5 (delta 0), pack-reused 0
+Receiving objects: 100% (8/8), done.
+@hcardenas:UCF-Cooding-Boot-Camp$ ll
+total 0
+drwxr-xr-x  8 hcardenas  staff   272B Jul 13 12:26 05-2017-Class-Repository/
+drwxr-xr-x  7 hcardenas  staff   238B Jul 15 16:04 Train-Scheduler/
+drwxr-xr-x  7 hcardenas  staff   238B Jul 15 21:18 GifTastic/
+drwxr-xr-x  8 hcardenas  staff   272B Jul 25 23:19 FunWithRealEstate/
+drwxr-xr-x  9 hcardenas  staff   306B Aug  2 23:01 PetLocator/
+drwxr-xr-x  6 hcardenas  staff   204B Aug  8 22:33 liri-node-app/
+@hcardenas:UCF-Cooding-Boot-Camp$ cd liri-node-app/
+@hcardenas:liri-node-app$ ll
+total 8
+-rw-r--r--  1 hcardenas  staff     0B Aug  8 22:33 index.html
+drwxr-xr-x  3 hcardenas  staff   102B Aug  8 22:33 assets/
+-rw-r--r--  1 hcardenas  staff    15B Aug  8 22:33 README.md
+@hcardenas:liri-node-app$ git rm index.html assets/
+fatal: not removing 'assets/' recursively without -r
+@hcardenas:liri-node-app$ git rm -r index.html assets/
+rm 'assets/css/style.css'
+rm 'index.html'
+@hcardenas:liri-node-app$ git ad -A
+git: 'ad' is not a git command. See 'git --help'.
+
+Did you mean one of these?
+	add
+	am
+@hcardenas:liri-node-app$ git add -A
+@hcardenas:liri-node-app$ git commit -m "removed files"
+[master 19f6ef4] removed files
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 assets/css/style.css
+ delete mode 100644 index.html
+@hcardenas:liri-node-app$ git push
+Enter passphrase for key '/Users/hcardenas/.ssh/id_rsa': 
+Counting objects: 2, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (1/1), done.
+Writing objects: 100% (2/2), 242 bytes | 0 bytes/s, done.
+Total 2 (delta 0), reused 1 (delta 0)
+To github.com:hcardenas/liri-node-app.git
+   b30dce5..19f6ef4  master -> master
+@hcardenas:liri-node-app$ vim .gitignore
+@hcardenas:liri-node-app$ ll
+total 8
+-rw-r--r--  1 hcardenas  staff    15B Aug  8 22:33 README.md
+@hcardenas:liri-node-app$ git add -A
+@hcardenas:liri-node-app$ git commit -m "added git ignore"
+[master c103d42] added git ignore
+ 1 file changed, 2 insertions(+)
+ create mode 100644 .gitignore
+@hcardenas:liri-node-app$ vim key.js
+@hcardenas:liri-node-app$ touch random.txt
+@hcardenas:liri-node-app$ vim random.txt 
+@hcardenas:liri-node-app$ touch liri.js
+@hcardenas:liri-node-app$ node liri.js 
+module.js:487
+    throw err;
+    ^
+
+Error: Cannot find module 'keys.js'
+    at Function.Module._resolveFilename (module.js:485:15)
+    at Function.Module._load (module.js:437:25)
+    at Module.require (module.js:513:17)
+    at require (internal/module.js:11:18)
+    at Object.<anonymous> (/Users/hcardenas/Documents/UCF-Cooding-Boot-Camp/liri-node-app/liri.js:1:73)
+    at Module._compile (module.js:569:30)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:503:32)
+    at tryModuleLoad (module.js:466:12)
+    at Function.Module._load (module.js:458:3)
+@hcardenas:liri-node-app$ move key.js keys.js
+-bash: move: command not found
+@hcardenas:liri-node-app$ mv key.js keys.js
+@hcardenas:liri-node-app$ node liri.js 
+module.js:487
+    throw err;
+    ^
+
+Error: Cannot find module 'keys.js'
+    at Function.Module._resolveFilename (module.js:485:15)
+    at Function.Module._load (module.js:437:25)
+    at Module.require (module.js:513:17)
+    at require (internal/module.js:11:18)
+    at Object.<anonymous> (/Users/hcardenas/Documents/UCF-Cooding-Boot-Camp/liri-node-app/liri.js:1:73)
+    at Module._compile (module.js:569:30)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:503:32)
+    at tryModuleLoad (module.js:466:12)
+    at Function.Module._load (module.js:458:3)
+@hcardenas:liri-node-app$ node liri.js 
+/Users/hcardenas/Documents/UCF-Cooding-Boot-Camp/liri-node-app/liri.js:1
+(function (exports, require, module, __filename, __dirname) { var key = requires("keys.js");
+                                                                        ^
+
+ReferenceError: requires is not defined
+    at Object.<anonymous> (/Users/hcardenas/Documents/UCF-Cooding-Boot-Camp/liri-node-app/liri.js:1:73)
+    at Module._compile (module.js:569:30)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:503:32)
+    at tryModuleLoad (module.js:466:12)
+    at Function.Module._load (module.js:458:3)
+    at Function.Module.runMain (module.js:605:10)
+    at startup (bootstrap_node.js:158:16)
+    at bootstrap_node.js:575:3
+@hcardenas:liri-node-app$ cd ../05-2017-Class-Repository/
+@hcardenas:05-2017-Class-Repository$ git pull
+Enter passphrase for key '/Users/hcardenas/.ssh/id_rsa': 
+remote: Counting objects: 546, done.
+remote: Compressing objects: 100% (71/71), done.
+remote: Total 546 (delta 50), reused 127 (delta 48), pack-reused 416
+Receiving objects: 100% (546/546), 32.97 MiB | 979.00 KiB/s, done.
+Resolving deltas: 100% (112/112), completed with 5 local objects.
+From github.com:UCF-Coding-Boot-Camp/05-2017-Class-Repository
+   f8d7c4b..6b13b3c  master     -> origin/master
+Updating f8d7c4b..6b13b3c
+Fast-forward
+ 01-Class-Content/06-ajax/01-Activities/12-CatButton/README.md        |  11 ++
+ .../06-ajax/01-Activities/12-CatButton/Solved/cat-button-solved.html |  47 +++++
+ .../06-ajax/01-Activities/12-CatButton/Unsolved/cat-button.html      |  47 +++++
+ .../06-ajax/01-Activities/13-ButtonTriggeredAJAX/README.md           |  11 ++
+ .../Solved/button-triggered-ajax-solution.html                       |  94 ++++++++++
+ .../13-ButtonTriggeredAJAX/Unsolved/button-triggered-ajax.html       |  76 +++++++++
+ 01-Class-Content/06-ajax/01-Activities/14-DynamicElements/README.md  |  11 ++
+ .../14-DynamicElements/Solved/dynamic-elements-solution.html         |  65 +++++++
+ .../01-Activities/14-DynamicElements/Unsolved/dynamic-elements.html  |  60 +++++++
+ 01-Class-Content/06-ajax/01-Activities/15-PausingGifs/README.md      |   9 +
+ .../01-Activities/15-PausingGifs/Solved/pausing-gifs-solution.html   |  32 ++++
+ .../06-ajax/01-Activities/15-PausingGifs/Unsolved/pausing-gifs.html  |  49 ++++++
+ .../06-ajax/01-Activities/16-NYTSearch/Instruction/Phase-01.md       |  19 +++
+ .../06-ajax/01-Activities/16-NYTSearch/Instruction/Phase-02.md       |  21 +++
+ .../06-ajax/01-Activities/16-NYTSearch/Instruction/Phase-03.md       |  13 ++
+ .../06-ajax/01-Activities/16-NYTSearch/Instruction/Phase-04.md       |   7 +
+ .../Solved/NYTArticleSearch_Best_Solution/nyt-example.html           | 125 ++++++++++++++
+ .../16-NYTSearch/Solved/NYTArticleSearch_Best_Solution/nytCode.js    | 149 ++++++++++++++++
+ .../16-NYTSearch/Solved/NYTArticleSearch_VideoComplement/APIKey.txt  |   1 +
+ .../Solved/NYTArticleSearch_VideoComplement/VIDEOLINK.txt            |   1 +
+ .../16-NYTSearch/Solved/NYTArticleSearch_VideoComplement/index.html  |  91 ++++++++++
+ .../16-NYTSearch/Solved/NYTArticleSearch_VideoComplement/logic.js    | 124 ++++++++++++++
+ .../Solved/NYTArticleSearch_VideoComplement/workingurl.txt           |   3 +
+ .../07-firebase/01-Activities/01-todolist-nopersistence/README.md    |  13 ++
+ .../SOLVED/1-student-do-todolist-solution.html                       |  98 +++++++++++
+ .../01-todolist-nopersistence/Unsolved/1-student-do-todolist.html    |  89 ++++++++++
+ .../07-firebase/01-Activities/02-signin-nopersistence/README.md      |  11 ++
+ .../SOLVED/2-student-do-signin-no-persistence-solution.html          | 112 ++++++++++++
+ .../Unsolved/2-student-do-signin-no-persistence.html                 | 102 +++++++++++
+ .../03-localstorage-demo/3-instructor-do-localstorage.html           |  70 ++++++++
+ .../07-firebase/01-Activities/04-signin-localstorage/README.md       |  11 ++
+ .../Solution/4-student-do-signin-localstorage-solution.html          | 131 ++++++++++++++
+ .../07-firebase/01-Activities/05-signin-sessionstorage/README.md     |   9 +
+ .../Solution/5-student-do-signin-session-storage-solution.html       | 131 ++++++++++++++
+ .../01-Activities/06-cookies-demo/6-instructor-do-cookies-intro.html |  83 +++++++++
+ .../07-signin-cookies/7-student-do-signin-cookies-solution.html      | 157 +++++++++++++++++
+ .../07-firebase/01-Activities/08-todolist-localstorage/README.md     |  19 +++
+ .../Solution/8-student-do-todolist-localstorage-solution.html        |  85 +++++++++
+ .../09-clickbutton/instructor-do-clickbutton-fireconsole.html        |  74 ++++++++
+ .../07-firebase/01-Activities/10-clickbutton-complete/README.md      |   9 +
+ .../10-clickbutton-complete/Solved/ClickButton-Deployed/.firebaserc  |   1 +
+ .../Solved/ClickButton-Deployed/database.rules.json                  |   4 +
+ .../Solved/ClickButton-Deployed/firebase.json                        |  14 ++
+ .../Solved/ClickButton-Deployed/public/index.html                    |  92 ++++++++++
+ .../Solved/instructor-do-clickbutton-fullcomments.html               |  94 ++++++++++
+ .../Unsolved/instructor-do-clickbutton-nocomments.html               |  68 ++++++++
+ .../07-firebase/01-Activities/11-countdownbutton/README.md           |  11 ++
+ .../07-firebase/01-Activities/11-countdownbutton/SOLVED/logic.js     |  93 ++++++++++
+ .../11-countdownbutton/SOLVED/student-do-downbutton.html             |  29 ++++
+ .../07-firebase/01-Activities/11-countdownbutton/Unsolved/logic.js   |  79 +++++++++
+ .../01-Activities/11-countdownbutton/Unsolved/logicOption2.js        |  63 +++++++
+ .../11-countdownbutton/Unsolved/student-do-downbutton.html           |  29 ++++
+ .../12-moreproperties/instructor-do-more-properties.html             |  99 +++++++++++
+ .../07-firebase/01-Activities/13-mostrecentuser/README.md            |  11 ++
+ .../01-Activities/13-mostrecentuser/SOLVED/recentuser-solved.html    | 152 +++++++++++++++++
+ .../01-Activities/13-mostrecentuser/Unsolved/recentuser.html         | 115 +++++++++++++
+ 01-Class-Content/07-firebase/01-Activities/14-codersbay/README.md    |  11 ++
+ .../01-Activities/14-codersbay/SOLVED/CodersBay-Deployed/.firebaserc |   1 +
+ .../14-codersbay/SOLVED/CodersBay-Deployed/database.rules.json       |   4 +
+ .../14-codersbay/SOLVED/CodersBay-Deployed/firebase.json             |  14 ++
+ .../14-codersbay/SOLVED/CodersBay-Deployed/public/index.html         |  94 ++++++++++
+ .../14-codersbay/SOLVED/CodersBay-Deployed/public/logic.js           | 107 ++++++++++++
+ .../07-firebase/01-Activities/14-codersbay/SOLVED/codersbay.html     |  94 ++++++++++
+ .../07-firebase/01-Activities/14-codersbay/SOLVED/logic.js           | 109 ++++++++++++
+ .../07-firebase/01-Activities/14-codersbay/Unsolved/codersbay.html   |  95 +++++++++++
+ .../07-firebase/01-Activities/14-codersbay/Unsolved/logic.js         |  89 ++++++++++
+ .../07-firebase/01-Activities/14-codersbay/Unsolved/logicOption2.js  |  75 ++++++++
+ .../01-Activities/15-intropresence/countdown-presence.html           |  34 ++++
+ 01-Class-Content/07-firebase/01-Activities/15-intropresence/logic.js | 119 +++++++++++++
+ .../07-firebase/01-Activities/16-codersbay-viewtracker/README.md     |  11 ++
+ .../SOLVED/CoderBay-Views-Deployed/.firebaserc                       |   1 +
+ .../SOLVED/CoderBay-Views-Deployed/database.rules.json               |   4 +
+ .../SOLVED/CoderBay-Views-Deployed/firebase.json                     |  14 ++
+ .../SOLVED/CoderBay-Views-Deployed/public/index.html                 |  95 +++++++++++
+ .../SOLVED/CoderBay-Views-Deployed/public/logic.js                   | 134 +++++++++++++++
+ .../16-codersbay-viewtracker/SOLVED/codersbay-view.html              |  96 +++++++++++
+ .../01-Activities/16-codersbay-viewtracker/SOLVED/logic.js           | 138 +++++++++++++++
+ .../16-codersbay-viewtracker/Unsolved/codersbay-view.html            |  95 +++++++++++
+ .../01-Activities/16-codersbay-viewtracker/Unsolved/logic.js         | 123 +++++++++++++
+ .../07-firebase/01-Activities/17-TimeSheet/Instructions/Phase-01.md  |  23 +++
+ .../07-firebase/01-Activities/17-TimeSheet/Instructions/Phase-02.md  |  13 ++
+ .../07-firebase/01-Activities/17-TimeSheet/Instructions/Phase-03.md  |  13 ++
+ .../07-firebase/01-Activities/17-TimeSheet/Instructions/Phase-04.md  |   9 +
+ .../01-Activities/17-TimeSheet/Solved/Timesheet-Deployed/.firebaserc |   1 +
+ .../17-TimeSheet/Solved/Timesheet-Deployed/database.rules.json       |   4 +
+ .../17-TimeSheet/Solved/Timesheet-Deployed/firebase.json             |  14 ++
+ .../17-TimeSheet/Solved/Timesheet-Deployed/public/index.html         | 105 ++++++++++++
+ .../17-TimeSheet/Solved/Timesheet-Deployed/public/timesheetLogic.js  | 101 +++++++++++
+ .../07-firebase/01-Activities/17-TimeSheet/Solved/index.html         | 105 ++++++++++++
+ .../07-firebase/01-Activities/17-TimeSheet/Solved/timesheetLogic.js  | 100 +++++++++++
+ .../07-firebase/01-Activities/18-Push/01-recent-user-with-set.html   | 156 +++++++++++++++++
+ .../07-firebase/01-Activities/18-Push/02-recent-user-with-push.html  | 159 +++++++++++++++++
+ .../19-Add_Child/recent-user-with-all-users-solved.html              | 183 ++++++++++++++++++++
+ .../01-Activities/19-Add_Child/recent-user-with-all-users.html       | 263 ++++++++++++++++++++++++++++
+ 01-Class-Content/07-firebase/01-Activities/20-MomentJS/README.md     |  13 ++
+ .../01-Activities/20-MomentJS/Solved/momentjs-activity-solved.html   |  57 +++++++
+ .../01-Activities/20-MomentJS/Unsolved/momentjs-activity.html        |  38 +++++
+ .../01-Activities/20-MomentJS/Unsolved/momentjs-instructor.html      |  28 +++
+ .../02-Homework/Instructions/Homework_RPS_Activity_Challenge.md      |  66 +++++++
+ .../02-Homework/Instructions/Homework_Train_Activity_Basic.md        |  63 +++++++
+ 01-Class-Content/07-firebase/02-Homework/Instructions/RPS_Video.mov  | Bin 0 -> 8916139 bytes
+ .../07-firebase/02-Homework/Instructions/Train_Time_Image.png        | Bin 0 -> 29403 bytes
+ 01-Class-Content/10-nodejs/01-Activities/01-HelloNode/hello.js       |   3 +
+ 01-Class-Content/10-nodejs/01-Activities/02-Sriracha/README.md       |  15 ++
+ .../10-nodejs/01-Activities/02-Sriracha/Solved/sriracha.js           |   2 +
+ 01-Class-Content/10-nodejs/01-Activities/03-Arguments/arguments.js   |   2 +
+ .../10-nodejs/01-Activities/04-ArgumentsAddition/argumentsadd.js     |   5 +
+ 01-Class-Content/10-nodejs/01-Activities/05-ParameterCheck/README.md |  13 ++
+ .../01-Activities/05-ParameterCheck/Solved/parametercheck.js         |  14 ++
+ 01-Class-Content/10-nodejs/01-Activities/06-Calculator/README.md     |  22 +++
+ .../10-nodejs/01-Activities/06-Calculator/Solved/calculator.js       |  91 ++++++++++
+ 01-Class-Content/10-nodejs/01-Activities/07-Multiples/README.md      |  15 ++
+ .../10-nodejs/01-Activities/07-Multiples/Solved/multiple.js          |  18 ++
+ .../10-nodejs/01-Activities/07-Multiples/Solved/multipleBonus.js     |  18 ++
+ 01-Class-Content/10-nodejs/01-Activities/08-Modularization/ess.js    |  17 ++
+ 01-Class-Content/10-nodejs/01-Activities/08-Modularization/run.js    |  21 +++
+ 01-Class-Content/10-nodejs/01-Activities/09-Bands/README.md          |  39 +++++
+ 01-Class-Content/10-nodejs/01-Activities/09-Bands/Solved/bands.js    |   5 +
+ 01-Class-Content/10-nodejs/01-Activities/09-Bands/Solved/run.js      |  10 ++
+ 01-Class-Content/10-nodejs/01-Activities/09-Bands/Solved/runBonus.js |  23 +++
+ 01-Class-Content/10-nodejs/01-Activities/10-CommandLineArg/README.md |  17 ++
+ .../10-nodejs/01-Activities/10-CommandLineArg/Solved/solution1.js    |  21 +++
+ .../10-nodejs/01-Activities/10-CommandLineArg/Solved/solution2.js    |   5 +
+ 01-Class-Content/10-nodejs/01-Activities/11-WriteFile/write.js       |  16 ++
+ 01-Class-Content/10-nodejs/01-Activities/12-ReadFile/movies.txt      |   1 +
+ 01-Class-Content/10-nodejs/01-Activities/12-ReadFile/read.js         |  23 +++
+ 01-Class-Content/10-nodejs/01-Activities/13-BestThingsEver/README.md |  25 +++
+ .../01-Activities/13-BestThingsEver/Solved/best_things_ever.txt      |   1 +
+ .../10-nodejs/01-Activities/13-BestThingsEver/Solved/readBest.js     |  20 +++
+ .../01-Activities/13-BestThingsEver/Unsolved/best_things_ever.txt    |   1 +
+ 01-Class-Content/10-nodejs/01-Activities/14-AppendFile/appendFile.js |  23 +++
+ 01-Class-Content/10-nodejs/01-Activities/15-BankJS/README.md         |  29 ++++
+ 01-Class-Content/10-nodejs/01-Activities/15-BankJS/Solved/bank.js    | 115 +++++++++++++
+ 01-Class-Content/10-nodejs/01-Activities/15-BankJS/Solved/bank.txt   |   1 +
+ 01-Class-Content/10-nodejs/01-Activities/15-BankJS/Unsolved/bank.txt |   1 +
+ .../10-nodejs/01-Activities/16-Request/1-MissingPackage/request.js   |  17 ++
+ .../01-Activities/16-Request/2-WithPackage/package-lock.json         | 284 +++++++++++++++++++++++++++++++
+ .../10-nodejs/01-Activities/16-Request/2-WithPackage/package.json    |  15 ++
+ .../10-nodejs/01-Activities/16-Request/2-WithPackage/request.js      |  17 ++
+ 01-Class-Content/10-nodejs/01-Activities/17-OMDB_Request/README.md   |  23 +++
+ .../10-nodejs/01-Activities/17-OMDB_Request/Solved/omdbRequest.js    |  14 ++
+ .../10-nodejs/01-Activities/17-OMDB_Request/Solved/package-lock.json | 284 +++++++++++++++++++++++++++++++
+ .../10-nodejs/01-Activities/17-OMDB_Request/Solved/package.json      |  15 ++
+ .../10-nodejs/01-Activities/18-OMDB_Request_Students/README.md       |  21 +++
+ .../18-OMDB_Request_Students/Solved/levelOneOmdbInteractive.js       |  31 ++++
+ .../18-OMDB_Request_Students/Solved/levelTwoOmdbInteractive.js       |  51 ++++++
+ .../01-Activities/18-OMDB_Request_Students/Solved/package-lock.json  | 284 +++++++++++++++++++++++++++++++
+ .../01-Activities/18-OMDB_Request_Students/Solved/package.json       |  15 ++
+ .../18-OMDB_Request_Students/Unsolved/omdbInteractiveStarter.js      |  34 ++++
+ .../10-nodejs/01-Activities/19-SyncVAsync/asyncAppend.js             |  42 +++++
+ 01-Class-Content/10-nodejs/01-Activities/19-SyncVAsync/syncAppend.js |  35 ++++
+ 01-Class-Content/10-nodejs/01-Activities/19-SyncVAsync/written.txt   |   1 +
+ .../10-nodejs/02-Homework/Instructions/homework_instructions.md      | 170 ++++++++++++++++++
+ 02-lesson-plans/part-time/06-Week/03-Day/Images/1-NYTApp.png         | Bin 0 -> 65497 bytes
+ 02-lesson-plans/part-time/06-Week/03-Day/Images/2-Cats_1.png         | Bin 0 -> 488490 bytes
+ 02-lesson-plans/part-time/06-Week/03-Day/Images/2-Cats_2.png         | Bin 0 -> 101650 bytes
+ 02-lesson-plans/part-time/06-Week/03-Day/Images/2-Cats_3.png         | Bin 0 -> 371845 bytes
+ 02-lesson-plans/part-time/06-Week/03-Day/Images/3-Celebrity_1.png    | Bin 0 -> 45929 bytes
+ 02-lesson-plans/part-time/06-Week/03-Day/Images/3-Celebrity_2.png    | Bin 0 -> 119645 bytes
+ 02-lesson-plans/part-time/06-Week/03-Day/Images/4-Dynamic.png        | Bin 0 -> 117297 bytes
+ 02-lesson-plans/part-time/06-Week/03-Day/Images/5-Pause.png          | Bin 0 -> 109108 bytes
+ 02-lesson-plans/part-time/06-Week/03-Day/Images/6-NYT_1.png          | Bin 0 -> 235734 bytes
+ 02-lesson-plans/part-time/06-Week/03-Day/Images/6-NYT_2.png          | Bin 0 -> 16115 bytes
+ 02-lesson-plans/part-time/06-Week/03-Day/Images/6-NYT_3.png          | Bin 0 -> 89849 bytes
+ 02-lesson-plans/part-time/06-Week/03-Day/Images/NYT-API.png          | Bin 0 -> 170513 bytes
+ 02-lesson-plans/part-time/07-Week/01-Day/Images/1-basictodo.png      | Bin 0 -> 26170 bytes
+ .../part-time/07-Week/01-Day/Images/12-local-storage-dev-tools.png   | Bin 0 -> 254765 bytes
+ .../part-time/07-Week/01-Day/Images/15-session-storage-dev-tools.png | Bin 0 -> 248366 bytes
+ 02-lesson-plans/part-time/07-Week/01-Day/Images/2-todocode_1.png     | Bin 0 -> 131103 bytes
+ 02-lesson-plans/part-time/07-Week/01-Day/Images/2-todocode_2.png     | Bin 0 -> 81189 bytes
+ 02-lesson-plans/part-time/07-Week/01-Day/Images/3-signin.png         | Bin 0 -> 34089 bytes
+ 02-lesson-plans/part-time/07-Week/01-Day/Images/4-localstorage.png   | Bin 0 -> 88650 bytes
+ .../part-time/07-Week/01-Day/Images/5-localstoragesignin.png         | Bin 0 -> 81322 bytes
+ 02-lesson-plans/part-time/07-Week/01-Day/Images/6-cookieparser.png   | Bin 0 -> 50198 bytes
+ 02-lesson-plans/part-time/07-Week/01-Day/Images/7-cookielines.png    | Bin 0 -> 63871 bytes
+ 02-lesson-plans/part-time/07-Week/01-Day/Images/8-todolocal_1.png    | Bin 0 -> 58525 bytes
+ 02-lesson-plans/part-time/07-Week/01-Day/Images/8-todolocal_2.png    | Bin 0 -> 82652 bytes
+ 02-lesson-plans/part-time/07-Week/01-Day/Images/8-todolocal_3.png    | Bin 0 -> 89592 bytes
+ 02-lesson-plans/part-time/07-Week/01-Day/Images/8-todolocal_4.png    | Bin 0 -> 164278 bytes
+ 02-lesson-plans/part-time/07-Week/01-Day/Images/9-trainapp.png       | Bin 0 -> 41944 bytes
+ 02-lesson-plans/part-time/07-Week/02-Day/Images/1-Database.png       | Bin 0 -> 18156 bytes
+ 02-lesson-plans/part-time/07-Week/02-Day/Images/10-CodersBay.png     | Bin 0 -> 111993 bytes
+ 02-lesson-plans/part-time/07-Week/02-Day/Images/11-Presence.png      | Bin 0 -> 148132 bytes
+ 02-lesson-plans/part-time/07-Week/02-Day/Images/12-Folders.png       | Bin 0 -> 33030 bytes
+ .../part-time/07-Week/02-Day/Images/13-CodersBayViews.png            | Bin 0 -> 275814 bytes
+ 02-lesson-plans/part-time/07-Week/02-Day/Images/2-Firebase_URL.png   | Bin 0 -> 11700 bytes
+ 02-lesson-plans/part-time/07-Week/02-Day/Images/3-Change_Rules.gif   | Bin 0 -> 1381584 bytes
+ 02-lesson-plans/part-time/07-Week/02-Day/Images/4-Click_Count_1.png  | Bin 0 -> 74059 bytes
+ 02-lesson-plans/part-time/07-Week/02-Day/Images/4-Click_Count_2.png  | Bin 0 -> 47470 bytes
+ 02-lesson-plans/part-time/07-Week/02-Day/Images/5-Show_Clicks.png    | Bin 0 -> 133756 bytes
+ 02-lesson-plans/part-time/07-Week/02-Day/Images/5-coderbay.png       | Bin 0 -> 111993 bytes
+ 02-lesson-plans/part-time/07-Week/02-Day/Images/6-Code_Snippet.png   | Bin 0 -> 162199 bytes
+ 02-lesson-plans/part-time/07-Week/02-Day/Images/7-Config.png         | Bin 0 -> 41227 bytes
+ 02-lesson-plans/part-time/07-Week/02-Day/Images/7-coderbayviews.png  | Bin 0 -> 275814 bytes
+ 02-lesson-plans/part-time/07-Week/02-Day/Images/8-Click-Button_1.png | Bin 0 -> 98985 bytes
+ 02-lesson-plans/part-time/07-Week/02-Day/Images/8-Click-Button_2.png | Bin 0 -> 94865 bytes
+ .../part-time/07-Week/02-Day/Images/9-Multiple-Properties.png        | Bin 0 -> 68867 bytes
+ 02-lesson-plans/part-time/07-Week/03-Day/Images/1-Timesheet.png      | Bin 0 -> 18950 bytes
+ 02-lesson-plans/part-time/07-Week/03-Day/Images/10-Push.png          | Bin 0 -> 277855 bytes
+ 02-lesson-plans/part-time/07-Week/03-Day/Images/11-childadded_2.png  | Bin 0 -> 32432 bytes
+ 02-lesson-plans/part-time/07-Week/03-Day/Images/12-Timestamp.png     | Bin 0 -> 28176 bytes
+ 02-lesson-plans/part-time/07-Week/03-Day/Images/13-ChildAdded.png    | Bin 0 -> 139278 bytes
+ 02-lesson-plans/part-time/07-Week/03-Day/Images/14-OrderBy.png       | Bin 0 -> 54710 bytes
+ 02-lesson-plans/part-time/07-Week/03-Day/Images/15-moment_1.png      | Bin 0 -> 10891 bytes
+ 02-lesson-plans/part-time/07-Week/03-Day/Images/16-moment_2.png      | Bin 0 -> 43889 bytes
+ 02-lesson-plans/part-time/07-Week/03-Day/Images/17-OnEvents.png      | Bin 0 -> 168227 bytes
+ 02-lesson-plans/part-time/07-Week/03-Day/Images/18-OnChild.png       | Bin 0 -> 183956 bytes
+ 02-lesson-plans/part-time/07-Week/03-Day/Images/2-RecentUser.png     | Bin 0 -> 20059 bytes
+ .../part-time/07-Week/03-Day/Images/2-employeetracker.png            | Bin 0 -> 43810 bytes
+ .../part-time/07-Week/03-Day/Images/3-RecentUserWithAll.png          | Bin 0 -> 22012 bytes
+ .../part-time/07-Week/03-Day/Images/4-EmployeeTracker.png            | Bin 0 -> 43810 bytes
+ 02-lesson-plans/part-time/07-Week/03-Day/Images/5-Tracker.png        | Bin 0 -> 393337 bytes
+ 02-lesson-plans/part-time/07-Week/03-Day/Images/6-Frodo.png          | Bin 0 -> 281283 bytes
+ 02-lesson-plans/part-time/07-Week/03-Day/Images/6-childadded_2.png   | Bin 0 -> 32432 bytes
+ 02-lesson-plans/part-time/07-Week/03-Day/Images/7-Tobias.png         | Bin 0 -> 273632 bytes
+ 02-lesson-plans/part-time/07-Week/03-Day/Images/7-moment_1.png       | Bin 0 -> 10891 bytes
+ 02-lesson-plans/part-time/07-Week/03-Day/Images/7-moment_2.png       | Bin 0 -> 43889 bytes
+ 02-lesson-plans/part-time/07-Week/03-Day/Images/8-Set.png            | Bin 0 -> 27198 bytes
+ 02-lesson-plans/part-time/07-Week/03-Day/Images/9-Smallpush.png      | Bin 0 -> 32301 bytes
+ 02-lesson-plans/part-time/07-Week/README.md                          |  38 +++++
+ .../part-time/08-Week/01-Day/Slide-Shows/API_Project_Week_1.pptx     | Bin 0 -> 1857531 bytes
+ .../part-time/08-Week/01-Day/Supplemental/API_Resources.docx         | Bin 0 -> 11009 bytes
+ .../part-time/08-Week/01-Day/Supplemental/API_Resources.md           | 109 ++++++++++++
+ .../part-time/08-Week/02-Day/Slide-Shows/GitVisualized.pptx          | Bin 0 -> 4254611 bytes
+ .../part-time/08-Week/02-Day/Supplemental/GitPullGuide.docx          | Bin 0 -> 581820 bytes
+ 02-lesson-plans/part-time/08-Week/03-Day/03-Day-Lessonplan.md        |  45 +++++
+ 02-lesson-plans/part-time/09-Week/01-Day/.gitkeep                    |   0
+ 02-lesson-plans/part-time/09-Week/02-Day/.gitkeep                    |   0
+ 02-lesson-plans/part-time/10-Week/01-Day/Images/1-Server_1.png       | Bin 0 -> 124216 bytes
+ 02-lesson-plans/part-time/10-Week/01-Day/Images/1-Server_2.png       | Bin 0 -> 167863 bytes
+ 02-lesson-plans/part-time/10-Week/01-Day/Images/10-Calculator.png    | Bin 0 -> 51339 bytes
+ 02-lesson-plans/part-time/10-Week/01-Day/Images/11-Multiples.png     | Bin 0 -> 35927 bytes
+ 02-lesson-plans/part-time/10-Week/01-Day/Images/11-Multiples_2.png   | Bin 0 -> 1862 bytes
+ 02-lesson-plans/part-time/10-Week/01-Day/Images/12-Essentials_1.png  | Bin 0 -> 50561 bytes
+ 02-lesson-plans/part-time/10-Week/01-Day/Images/12-Essentials_2.png  | Bin 0 -> 58664 bytes
+ 02-lesson-plans/part-time/10-Week/01-Day/Images/12-Essentials_3.png  | Bin 0 -> 129872 bytes
+ 02-lesson-plans/part-time/10-Week/01-Day/Images/13-Liri_1.png        | Bin 0 -> 32287 bytes
+ 02-lesson-plans/part-time/10-Week/01-Day/Images/13-Liri_2.png        | Bin 0 -> 20210 bytes
+ 02-lesson-plans/part-time/10-Week/01-Day/Images/2-Async_1.png        | Bin 0 -> 156000 bytes
+ 02-lesson-plans/part-time/10-Week/01-Day/Images/2-Async_2.png        | Bin 0 -> 115934 bytes
+ 02-lesson-plans/part-time/10-Week/01-Day/Images/3-TestingNode_1.png  | Bin 0 -> 5427 bytes
+ 02-lesson-plans/part-time/10-Week/01-Day/Images/4-NodeHello.png      | Bin 0 -> 4076 bytes
+ 02-lesson-plans/part-time/10-Week/01-Day/Images/5-NodeSriracha.png   | Bin 0 -> 3213 bytes
+ 02-lesson-plans/part-time/10-Week/01-Day/Images/6-ProcessArgv.png    | Bin 0 -> 4556 bytes
+ .../part-time/10-Week/01-Day/Images/7-ProcessArgvArray.png           | Bin 0 -> 11468 bytes
+ 02-lesson-plans/part-time/10-Week/01-Day/Images/8-AddArgs_1.png      | Bin 0 -> 6760 bytes
+ 02-lesson-plans/part-time/10-Week/01-Day/Images/8-AddArgs_2.png      | Bin 0 -> 3600 bytes
+ 02-lesson-plans/part-time/10-Week/01-Day/Images/8-AddArgs_3.png      | Bin 0 -> 2131 bytes
+ 02-lesson-plans/part-time/10-Week/01-Day/Images/8-AddArgs_4.png      | Bin 0 -> 10165 bytes
+ 02-lesson-plans/part-time/10-Week/01-Day/Images/8-AddArgs_5.png      | Bin 0 -> 2780 bytes
+ .../part-time/10-Week/01-Day/Images/9-ParameterCheck_1.png           | Bin 0 -> 33799 bytes
+ .../part-time/10-Week/01-Day/Images/9-ParameterCheck_2.png           | Bin 0 -> 2752 bytes
+ .../part-time/10-Week/01-Day/Images/9-ParameterCheck_3.png           | Bin 0 -> 2862 bytes
+ 02-lesson-plans/part-time/10-Week/01-Day/Slide-Shows/Intro_node.pptx | Bin 0 -> 1392830 bytes
+ 02-lesson-plans/part-time/10-Week/02-Day/Images/1-Equality_1.png     | Bin 0 -> 39540 bytes
+ 02-lesson-plans/part-time/10-Week/02-Day/Images/1-Equality_2.png     | Bin 0 -> 15067 bytes
+ 02-lesson-plans/part-time/10-Week/02-Day/Images/10-OMDB_1.png        | Bin 0 -> 27634 bytes
+ 02-lesson-plans/part-time/10-Week/02-Day/Images/11-OMDBSolved_1.png  | Bin 0 -> 73406 bytes
+ 02-lesson-plans/part-time/10-Week/02-Day/Images/11-OMDBSolved_2.png  | Bin 0 -> 50965 bytes
+ 02-lesson-plans/part-time/10-Week/02-Day/Images/12-AsyncVsSync.png   | Bin 0 -> 811716 bytes
+ 02-lesson-plans/part-time/10-Week/02-Day/Images/2-Write_1.png        | Bin 0 -> 41607 bytes
+ 02-lesson-plans/part-time/10-Week/02-Day/Images/2-Write_2.png        | Bin 0 -> 2005 bytes
+ 02-lesson-plans/part-time/10-Week/02-Day/Images/3-Read_1.png         | Bin 0 -> 53525 bytes
+ 02-lesson-plans/part-time/10-Week/02-Day/Images/3-Read_2.png         | Bin 0 -> 4879 bytes
+ 02-lesson-plans/part-time/10-Week/02-Day/Images/4-Docs_1.png         | Bin 0 -> 70186 bytes
+ 02-lesson-plans/part-time/10-Week/02-Day/Images/4-Docs_2.png         | Bin 0 -> 69992 bytes
+ 02-lesson-plans/part-time/10-Week/02-Day/Images/5-Best_1.png         | Bin 0 -> 48163 bytes
+ 02-lesson-plans/part-time/10-Week/02-Day/Images/6-Append_1.png       | Bin 0 -> 50133 bytes
+ 02-lesson-plans/part-time/10-Week/02-Day/Images/7-Bank_1.png         | Bin 0 -> 28684 bytes
+ 02-lesson-plans/part-time/10-Week/02-Day/Images/7-Bank_2.png         | Bin 0 -> 4844 bytes
+ 02-lesson-plans/part-time/10-Week/02-Day/Images/8-BankCode_1.png     | Bin 0 -> 55120 bytes
+ 02-lesson-plans/part-time/10-Week/02-Day/Images/8-BankCode_2.png     | Bin 0 -> 48036 bytes
+ 02-lesson-plans/part-time/10-Week/02-Day/Images/8-BankCode_3.png     | Bin 0 -> 47829 bytes
+ 02-lesson-plans/part-time/10-Week/02-Day/Images/9-Request_1.png      | Bin 0 -> 52680 bytes
+ 02-lesson-plans/part-time/10-Week/02-Day/Images/9-Request_2.png      | Bin 0 -> 27458 bytes
+ 02-lesson-plans/part-time/10-Week/02-Day/Images/9-Request_3.png      | Bin 0 -> 30662 bytes
+ 276 files changed, 8472 insertions(+)
+ create mode 100644 01-Class-Content/06-ajax/01-Activities/12-CatButton/README.md
+ create mode 100644 01-Class-Content/06-ajax/01-Activities/12-CatButton/Solved/cat-button-solved.html
+ create mode 100644 01-Class-Content/06-ajax/01-Activities/12-CatButton/Unsolved/cat-button.html
+ create mode 100644 01-Class-Content/06-ajax/01-Activities/13-ButtonTriggeredAJAX/README.md
+ create mode 100644 01-Class-Content/06-ajax/01-Activities/13-ButtonTriggeredAJAX/Solved/button-triggered-ajax-solution.html
+ create mode 100644 01-Class-Content/06-ajax/01-Activities/13-ButtonTriggeredAJAX/Unsolved/button-triggered-ajax.html
+ create mode 100644 01-Class-Content/06-ajax/01-Activities/14-DynamicElements/README.md
+ create mode 100644 01-Class-Content/06-ajax/01-Activities/14-DynamicElements/Solved/dynamic-elements-solution.html
+ create mode 100644 01-Class-Content/06-ajax/01-Activities/14-DynamicElements/Unsolved/dynamic-elements.html
+ create mode 100644 01-Class-Content/06-ajax/01-Activities/15-PausingGifs/README.md
+ create mode 100644 01-Class-Content/06-ajax/01-Activities/15-PausingGifs/Solved/pausing-gifs-solution.html
+ create mode 100644 01-Class-Content/06-ajax/01-Activities/15-PausingGifs/Unsolved/pausing-gifs.html
+ create mode 100644 01-Class-Content/06-ajax/01-Activities/16-NYTSearch/Instruction/Phase-01.md
+ create mode 100644 01-Class-Content/06-ajax/01-Activities/16-NYTSearch/Instruction/Phase-02.md
+ create mode 100644 01-Class-Content/06-ajax/01-Activities/16-NYTSearch/Instruction/Phase-03.md
+ create mode 100644 01-Class-Content/06-ajax/01-Activities/16-NYTSearch/Instruction/Phase-04.md
+ create mode 100644 01-Class-Content/06-ajax/01-Activities/16-NYTSearch/Solved/NYTArticleSearch_Best_Solution/nyt-example.html
+ create mode 100644 01-Class-Content/06-ajax/01-Activities/16-NYTSearch/Solved/NYTArticleSearch_Best_Solution/nytCode.js
+ create mode 100644 01-Class-Content/06-ajax/01-Activities/16-NYTSearch/Solved/NYTArticleSearch_VideoComplement/APIKey.txt
+ create mode 100644 01-Class-Content/06-ajax/01-Activities/16-NYTSearch/Solved/NYTArticleSearch_VideoComplement/VIDEOLINK.txt
+ create mode 100644 01-Class-Content/06-ajax/01-Activities/16-NYTSearch/Solved/NYTArticleSearch_VideoComplement/index.html
+ create mode 100644 01-Class-Content/06-ajax/01-Activities/16-NYTSearch/Solved/NYTArticleSearch_VideoComplement/logic.js
+ create mode 100644 01-Class-Content/06-ajax/01-Activities/16-NYTSearch/Solved/NYTArticleSearch_VideoComplement/workingurl.txt
+ create mode 100644 01-Class-Content/07-firebase/01-Activities/01-todolist-nopersistence/README.md
+ create mode 100644 01-Class-Content/07-firebase/01-Activities/01-todolist-nopersistence/SOLVED/1-student-do-todolist-solution.html
+ create mode 100644 01-Class-Content/07-firebase/01-Activities/01-todolist-nopersistence/Unsolved/1-student-do-todolist.html
+ create mode 100644 01-Class-Content/07-firebase/01-Activities/02-signin-nopersistence/README.md
+ create mode 100644 01-Class-Content/07-firebase/01-Activities/02-signin-nopersistence/SOLVED/2-student-do-signin-no-persistence-solution.html
+ create mode 100644 01-Class-Content/07-firebase/01-Activities/02-signin-nopersistence/Unsolved/2-student-do-signin-no-persistence.html
+ create mode 100644 01-Class-Content/07-firebase/01-Activities/03-localstorage-demo/3-instructor-do-localstorage.html
+ create mode 100644 01-Class-Content/07-firebase/01-Activities/04-signin-localstorage/README.md
+ create mode 100644 01-Class-Content/07-firebase/01-Activities/04-signin-localstorage/Solution/4-student-do-signin-localstorage-solution.html
+ create mode 100644 01-Class-Content/07-firebase/01-Activities/05-signin-sessionstorage/README.md
+ create mode 100644 01-Class-Content/07-firebase/01-Activities/05-signin-sessionstorage/Solution/5-student-do-signin-session-storage-solution.html
+ create mode 100644 01-Class-Content/07-firebase/01-Activities/06-cookies-demo/6-instructor-do-cookies-intro.html
+ create mode 100644 01-Class-Content/07-firebase/01-Activities/07-signin-cookies/7-student-do-signin-cookies-solution.html
+ create mode 100644 01-Class-Content/07-firebase/01-Activities/08-todolist-localstorage/README.md
+ create mode 100644 01-Class-Content/07-firebase/01-Activities/08-todolist-localstorage/Solution/8-student-do-todolist-localstorage-solution.html
+ create mode 100644 01-Class-Content/07-firebase/01-Activities/09-clickbutton/instructor-do-clickbutton-fireconsole.html
+ create mode 100644 01-Class-Content/07-firebase/01-Activities/10-clickbutton-complete/README.md
+ create mode 100644 01-Class-Content/07-firebase/01-Activities/10-clickbutton-complete/Solved/ClickButton-Deployed/.firebaserc
+ create mode 100644 01-Class-Content/07-firebase/01-Activities/10-clickbutton-complete/Solved/ClickButton-Deployed/database.rules.json
+ create mode 100644 01-Class-Content/07-firebase/01-Activities/10-clickbutton-complete/Solved/ClickButton-Deployed/firebase.json
+ create mode 100644 01-Class-Content/07-firebase/01-Activities/10-clickbutton-complete/Solved/ClickButton-Deployed/public/index.html
+ create mode 100644 01-Class-Content/07-firebase/01-Activities/10-clickbutton-complete/Solved/instructor-do-clickbutton-fullcomments.html
+ create mode 100644 01-Class-Content/07-firebase/01-Activities/10-clickbutton-complete/Unsolved/instructor-do-clickbutton-nocomments.html
+ create mode 100644 01-Class-Content/07-firebase/01-Activities/11-countdownbutton/README.md
+ create mode 100644 01-Class-Content/07-firebase/01-Activities/11-countdownbutton/SOLVED/logic.js
+ create mode 100644 01-Class-Content/07-firebase/01-Activities/11-countdownbutton/SOLVED/student-do-downbutton.html
+ create mode 100644 01-Class-Content/07-firebase/01-Activities/11-countdownbutton/Unsolved/logic.js
+ create mode 100644 01-Class-Content/07-firebase/01-Activities/11-countdownbutton/Unsolved/logicOption2.js
+ create mode 100644 01-Class-Content/07-firebase/01-Activities/11-countdownbutton/Unsolved/student-do-downbutton.html
+ create mode 100644 01-Class-Content/07-firebase/01-Activities/12-moreproperties/instructor-do-more-properties.html
+ create mode 100644 01-Class-Content/07-firebase/01-Activities/13-mostrecentuser/README.md
+ create mode 100644 01-Class-Content/07-firebase/01-Activities/13-mostrecentuser/SOLVED/recentuser-solved.html
+ create mode 100644 01-Class-Content/07-firebase/01-Activities/13-mostrecentuser/Unsolved/recentuser.html
+ create mode 100644 01-Class-Content/07-firebase/01-Activities/14-codersbay/README.md
+ create mode 100644 01-Class-Content/07-firebase/01-Activities/14-codersbay/SOLVED/CodersBay-Deployed/.firebaserc
+ create mode 100644 01-Class-Content/07-firebase/01-Activities/14-codersbay/SOLVED/CodersBay-Deployed/database.rules.json
+ create mode 100644 01-Class-Content/07-firebase/01-Activities/14-codersbay/SOLVED/CodersBay-Deployed/firebase.json
+ create mode 100644 01-Class-Content/07-firebase/01-Activities/14-codersbay/SOLVED/CodersBay-Deployed/public/index.html
+ create mode 100644 01-Class-Content/07-firebase/01-Activities/14-codersbay/SOLVED/CodersBay-Deployed/public/logic.js
+ create mode 100644 01-Class-Content/07-firebase/01-Activities/14-codersbay/SOLVED/codersbay.html
+ create mode 100644 01-Class-Content/07-firebase/01-Activities/14-codersbay/SOLVED/logic.js
+ create mode 100644 01-Class-Content/07-firebase/01-Activities/14-codersbay/Unsolved/codersbay.html
+ create mode 100644 01-Class-Content/07-firebase/01-Activities/14-codersbay/Unsolved/logic.js
+ create mode 100644 01-Class-Content/07-firebase/01-Activities/14-codersbay/Unsolved/logicOption2.js
+ create mode 100644 01-Class-Content/07-firebase/01-Activities/15-intropresence/countdown-presence.html
+ create mode 100644 01-Class-Content/07-firebase/01-Activities/15-intropresence/logic.js
+ create mode 100644 01-Class-Content/07-firebase/01-Activities/16-codersbay-viewtracker/README.md
+ create mode 100644 01-Class-Content/07-firebase/01-Activities/16-codersbay-viewtracker/SOLVED/CoderBay-Views-Deployed/.firebaserc
+ create mode 100644 01-Class-Content/07-firebase/01-Activities/16-codersbay-viewtracker/SOLVED/CoderBay-Views-Deployed/database.rules.json
+ create mode 100644 01-Class-Content/07-firebase/01-Activities/16-codersbay-viewtracker/SOLVED/CoderBay-Views-Deployed/firebase.json
+ create mode 100644 01-Class-Content/07-firebase/01-Activities/16-codersbay-viewtracker/SOLVED/CoderBay-Views-Deployed/public/index.html
+ create mode 100644 01-Class-Content/07-firebase/01-Activities/16-codersbay-viewtracker/SOLVED/CoderBay-Views-Deployed/public/logic.js
+ create mode 100644 01-Class-Content/07-firebase/01-Activities/16-codersbay-viewtracker/SOLVED/codersbay-view.html
+ create mode 100644 01-Class-Content/07-firebase/01-Activities/16-codersbay-viewtracker/SOLVED/logic.js
+ create mode 100644 01-Class-Content/07-firebase/01-Activities/16-codersbay-viewtracker/Unsolved/codersbay-view.html
+ create mode 100644 01-Class-Content/07-firebase/01-Activities/16-codersbay-viewtracker/Unsolved/logic.js
+ create mode 100644 01-Class-Content/07-firebase/01-Activities/17-TimeSheet/Instructions/Phase-01.md
+ create mode 100644 01-Class-Content/07-firebase/01-Activities/17-TimeSheet/Instructions/Phase-02.md
+ create mode 100644 01-Class-Content/07-firebase/01-Activities/17-TimeSheet/Instructions/Phase-03.md
+ create mode 100644 01-Class-Content/07-firebase/01-Activities/17-TimeSheet/Instructions/Phase-04.md
+ create mode 100644 01-Class-Content/07-firebase/01-Activities/17-TimeSheet/Solved/Timesheet-Deployed/.firebaserc
+ create mode 100644 01-Class-Content/07-firebase/01-Activities/17-TimeSheet/Solved/Timesheet-Deployed/database.rules.json
+ create mode 100644 01-Class-Content/07-firebase/01-Activities/17-TimeSheet/Solved/Timesheet-Deployed/firebase.json
+ create mode 100644 01-Class-Content/07-firebase/01-Activities/17-TimeSheet/Solved/Timesheet-Deployed/public/index.html
+ create mode 100644 01-Class-Content/07-firebase/01-Activities/17-TimeSheet/Solved/Timesheet-Deployed/public/timesheetLogic.js
+ create mode 100644 01-Class-Content/07-firebase/01-Activities/17-TimeSheet/Solved/index.html
+ create mode 100644 01-Class-Content/07-firebase/01-Activities/17-TimeSheet/Solved/timesheetLogic.js
+ create mode 100644 01-Class-Content/07-firebase/01-Activities/18-Push/01-recent-user-with-set.html
+ create mode 100644 01-Class-Content/07-firebase/01-Activities/18-Push/02-recent-user-with-push.html
+ create mode 100644 01-Class-Content/07-firebase/01-Activities/19-Add_Child/recent-user-with-all-users-solved.html
+ create mode 100644 01-Class-Content/07-firebase/01-Activities/19-Add_Child/recent-user-with-all-users.html
+ create mode 100644 01-Class-Content/07-firebase/01-Activities/20-MomentJS/README.md
+ create mode 100644 01-Class-Content/07-firebase/01-Activities/20-MomentJS/Solved/momentjs-activity-solved.html
+ create mode 100644 01-Class-Content/07-firebase/01-Activities/20-MomentJS/Unsolved/momentjs-activity.html
+ create mode 100644 01-Class-Content/07-firebase/01-Activities/20-MomentJS/Unsolved/momentjs-instructor.html
+ create mode 100644 01-Class-Content/07-firebase/02-Homework/Instructions/Homework_RPS_Activity_Challenge.md
+ create mode 100644 01-Class-Content/07-firebase/02-Homework/Instructions/Homework_Train_Activity_Basic.md
+ create mode 100644 01-Class-Content/07-firebase/02-Homework/Instructions/RPS_Video.mov
+ create mode 100644 01-Class-Content/07-firebase/02-Homework/Instructions/Train_Time_Image.png
+ create mode 100644 01-Class-Content/10-nodejs/01-Activities/01-HelloNode/hello.js
+ create mode 100644 01-Class-Content/10-nodejs/01-Activities/02-Sriracha/README.md
+ create mode 100644 01-Class-Content/10-nodejs/01-Activities/02-Sriracha/Solved/sriracha.js
+ create mode 100644 01-Class-Content/10-nodejs/01-Activities/03-Arguments/arguments.js
+ create mode 100644 01-Class-Content/10-nodejs/01-Activities/04-ArgumentsAddition/argumentsadd.js
+ create mode 100644 01-Class-Content/10-nodejs/01-Activities/05-ParameterCheck/README.md
+ create mode 100644 01-Class-Content/10-nodejs/01-Activities/05-ParameterCheck/Solved/parametercheck.js
+ create mode 100644 01-Class-Content/10-nodejs/01-Activities/06-Calculator/README.md
+ create mode 100644 01-Class-Content/10-nodejs/01-Activities/06-Calculator/Solved/calculator.js
+ create mode 100644 01-Class-Content/10-nodejs/01-Activities/07-Multiples/README.md
+ create mode 100644 01-Class-Content/10-nodejs/01-Activities/07-Multiples/Solved/multiple.js
+ create mode 100644 01-Class-Content/10-nodejs/01-Activities/07-Multiples/Solved/multipleBonus.js
+ create mode 100644 01-Class-Content/10-nodejs/01-Activities/08-Modularization/ess.js
+ create mode 100644 01-Class-Content/10-nodejs/01-Activities/08-Modularization/run.js
+ create mode 100644 01-Class-Content/10-nodejs/01-Activities/09-Bands/README.md
+ create mode 100644 01-Class-Content/10-nodejs/01-Activities/09-Bands/Solved/bands.js
+ create mode 100644 01-Class-Content/10-nodejs/01-Activities/09-Bands/Solved/run.js
+ create mode 100644 01-Class-Content/10-nodejs/01-Activities/09-Bands/Solved/runBonus.js
+ create mode 100644 01-Class-Content/10-nodejs/01-Activities/10-CommandLineArg/README.md
+ create mode 100644 01-Class-Content/10-nodejs/01-Activities/10-CommandLineArg/Solved/solution1.js
+ create mode 100644 01-Class-Content/10-nodejs/01-Activities/10-CommandLineArg/Solved/solution2.js
+ create mode 100644 01-Class-Content/10-nodejs/01-Activities/11-WriteFile/write.js
+ create mode 100644 01-Class-Content/10-nodejs/01-Activities/12-ReadFile/movies.txt
+ create mode 100644 01-Class-Content/10-nodejs/01-Activities/12-ReadFile/read.js
+ create mode 100644 01-Class-Content/10-nodejs/01-Activities/13-BestThingsEver/README.md
+ create mode 100644 01-Class-Content/10-nodejs/01-Activities/13-BestThingsEver/Solved/best_things_ever.txt
+ create mode 100644 01-Class-Content/10-nodejs/01-Activities/13-BestThingsEver/Solved/readBest.js
+ create mode 100644 01-Class-Content/10-nodejs/01-Activities/13-BestThingsEver/Unsolved/best_things_ever.txt
+ create mode 100644 01-Class-Content/10-nodejs/01-Activities/14-AppendFile/appendFile.js
+ create mode 100644 01-Class-Content/10-nodejs/01-Activities/15-BankJS/README.md
+ create mode 100644 01-Class-Content/10-nodejs/01-Activities/15-BankJS/Solved/bank.js
+ create mode 100644 01-Class-Content/10-nodejs/01-Activities/15-BankJS/Solved/bank.txt
+ create mode 100644 01-Class-Content/10-nodejs/01-Activities/15-BankJS/Unsolved/bank.txt
+ create mode 100644 01-Class-Content/10-nodejs/01-Activities/16-Request/1-MissingPackage/request.js
+ create mode 100644 01-Class-Content/10-nodejs/01-Activities/16-Request/2-WithPackage/package-lock.json
+ create mode 100644 01-Class-Content/10-nodejs/01-Activities/16-Request/2-WithPackage/package.json
+ create mode 100644 01-Class-Content/10-nodejs/01-Activities/16-Request/2-WithPackage/request.js
+ create mode 100644 01-Class-Content/10-nodejs/01-Activities/17-OMDB_Request/README.md
+ create mode 100644 01-Class-Content/10-nodejs/01-Activities/17-OMDB_Request/Solved/omdbRequest.js
+ create mode 100644 01-Class-Content/10-nodejs/01-Activities/17-OMDB_Request/Solved/package-lock.json
+ create mode 100644 01-Class-Content/10-nodejs/01-Activities/17-OMDB_Request/Solved/package.json
+ create mode 100644 01-Class-Content/10-nodejs/01-Activities/18-OMDB_Request_Students/README.md
+ create mode 100644 01-Class-Content/10-nodejs/01-Activities/18-OMDB_Request_Students/Solved/levelOneOmdbInteractive.js
+ create mode 100644 01-Class-Content/10-nodejs/01-Activities/18-OMDB_Request_Students/Solved/levelTwoOmdbInteractive.js
+ create mode 100644 01-Class-Content/10-nodejs/01-Activities/18-OMDB_Request_Students/Solved/package-lock.json
+ create mode 100644 01-Class-Content/10-nodejs/01-Activities/18-OMDB_Request_Students/Solved/package.json
+ create mode 100644 01-Class-Content/10-nodejs/01-Activities/18-OMDB_Request_Students/Unsolved/omdbInteractiveStarter.js
+ create mode 100644 01-Class-Content/10-nodejs/01-Activities/19-SyncVAsync/asyncAppend.js
+ create mode 100644 01-Class-Content/10-nodejs/01-Activities/19-SyncVAsync/syncAppend.js
+ create mode 100644 01-Class-Content/10-nodejs/01-Activities/19-SyncVAsync/written.txt
+ create mode 100644 01-Class-Content/10-nodejs/02-Homework/Instructions/homework_instructions.md
+ create mode 100644 02-lesson-plans/part-time/06-Week/03-Day/Images/1-NYTApp.png
+ create mode 100644 02-lesson-plans/part-time/06-Week/03-Day/Images/2-Cats_1.png
+ create mode 100644 02-lesson-plans/part-time/06-Week/03-Day/Images/2-Cats_2.png
+ create mode 100644 02-lesson-plans/part-time/06-Week/03-Day/Images/2-Cats_3.png
+ create mode 100644 02-lesson-plans/part-time/06-Week/03-Day/Images/3-Celebrity_1.png
+ create mode 100644 02-lesson-plans/part-time/06-Week/03-Day/Images/3-Celebrity_2.png
+ create mode 100644 02-lesson-plans/part-time/06-Week/03-Day/Images/4-Dynamic.png
+ create mode 100644 02-lesson-plans/part-time/06-Week/03-Day/Images/5-Pause.png
+ create mode 100644 02-lesson-plans/part-time/06-Week/03-Day/Images/6-NYT_1.png
+ create mode 100644 02-lesson-plans/part-time/06-Week/03-Day/Images/6-NYT_2.png
+ create mode 100644 02-lesson-plans/part-time/06-Week/03-Day/Images/6-NYT_3.png
+ create mode 100644 02-lesson-plans/part-time/06-Week/03-Day/Images/NYT-API.png
+ create mode 100644 02-lesson-plans/part-time/07-Week/01-Day/Images/1-basictodo.png
+ create mode 100644 02-lesson-plans/part-time/07-Week/01-Day/Images/12-local-storage-dev-tools.png
+ create mode 100644 02-lesson-plans/part-time/07-Week/01-Day/Images/15-session-storage-dev-tools.png
+ create mode 100644 02-lesson-plans/part-time/07-Week/01-Day/Images/2-todocode_1.png
+ create mode 100644 02-lesson-plans/part-time/07-Week/01-Day/Images/2-todocode_2.png
+ create mode 100644 02-lesson-plans/part-time/07-Week/01-Day/Images/3-signin.png
+ create mode 100644 02-lesson-plans/part-time/07-Week/01-Day/Images/4-localstorage.png
+ create mode 100644 02-lesson-plans/part-time/07-Week/01-Day/Images/5-localstoragesignin.png
+ create mode 100644 02-lesson-plans/part-time/07-Week/01-Day/Images/6-cookieparser.png
+ create mode 100644 02-lesson-plans/part-time/07-Week/01-Day/Images/7-cookielines.png
+ create mode 100644 02-lesson-plans/part-time/07-Week/01-Day/Images/8-todolocal_1.png
+ create mode 100644 02-lesson-plans/part-time/07-Week/01-Day/Images/8-todolocal_2.png
+ create mode 100644 02-lesson-plans/part-time/07-Week/01-Day/Images/8-todolocal_3.png
+ create mode 100644 02-lesson-plans/part-time/07-Week/01-Day/Images/8-todolocal_4.png
+ create mode 100644 02-lesson-plans/part-time/07-Week/01-Day/Images/9-trainapp.png
+ create mode 100644 02-lesson-plans/part-time/07-Week/02-Day/Images/1-Database.png
+ create mode 100644 02-lesson-plans/part-time/07-Week/02-Day/Images/10-CodersBay.png
+ create mode 100644 02-lesson-plans/part-time/07-Week/02-Day/Images/11-Presence.png
+ create mode 100644 02-lesson-plans/part-time/07-Week/02-Day/Images/12-Folders.png
+ create mode 100644 02-lesson-plans/part-time/07-Week/02-Day/Images/13-CodersBayViews.png
+ create mode 100644 02-lesson-plans/part-time/07-Week/02-Day/Images/2-Firebase_URL.png
+ create mode 100644 02-lesson-plans/part-time/07-Week/02-Day/Images/3-Change_Rules.gif
+ create mode 100644 02-lesson-plans/part-time/07-Week/02-Day/Images/4-Click_Count_1.png
+ create mode 100644 02-lesson-plans/part-time/07-Week/02-Day/Images/4-Click_Count_2.png
+ create mode 100644 02-lesson-plans/part-time/07-Week/02-Day/Images/5-Show_Clicks.png
+ create mode 100644 02-lesson-plans/part-time/07-Week/02-Day/Images/5-coderbay.png
+ create mode 100644 02-lesson-plans/part-time/07-Week/02-Day/Images/6-Code_Snippet.png
+ create mode 100644 02-lesson-plans/part-time/07-Week/02-Day/Images/7-Config.png
+ create mode 100644 02-lesson-plans/part-time/07-Week/02-Day/Images/7-coderbayviews.png
+ create mode 100644 02-lesson-plans/part-time/07-Week/02-Day/Images/8-Click-Button_1.png
+ create mode 100644 02-lesson-plans/part-time/07-Week/02-Day/Images/8-Click-Button_2.png
+ create mode 100644 02-lesson-plans/part-time/07-Week/02-Day/Images/9-Multiple-Properties.png
+ create mode 100644 02-lesson-plans/part-time/07-Week/03-Day/Images/1-Timesheet.png
+ create mode 100644 02-lesson-plans/part-time/07-Week/03-Day/Images/10-Push.png
+ create mode 100644 02-lesson-plans/part-time/07-Week/03-Day/Images/11-childadded_2.png
+ create mode 100644 02-lesson-plans/part-time/07-Week/03-Day/Images/12-Timestamp.png
+ create mode 100644 02-lesson-plans/part-time/07-Week/03-Day/Images/13-ChildAdded.png
+ create mode 100644 02-lesson-plans/part-time/07-Week/03-Day/Images/14-OrderBy.png
+ create mode 100644 02-lesson-plans/part-time/07-Week/03-Day/Images/15-moment_1.png
+ create mode 100644 02-lesson-plans/part-time/07-Week/03-Day/Images/16-moment_2.png
+ create mode 100644 02-lesson-plans/part-time/07-Week/03-Day/Images/17-OnEvents.png
+ create mode 100644 02-lesson-plans/part-time/07-Week/03-Day/Images/18-OnChild.png
+ create mode 100644 02-lesson-plans/part-time/07-Week/03-Day/Images/2-RecentUser.png
+ create mode 100644 02-lesson-plans/part-time/07-Week/03-Day/Images/2-employeetracker.png
+ create mode 100644 02-lesson-plans/part-time/07-Week/03-Day/Images/3-RecentUserWithAll.png
+ create mode 100644 02-lesson-plans/part-time/07-Week/03-Day/Images/4-EmployeeTracker.png
+ create mode 100644 02-lesson-plans/part-time/07-Week/03-Day/Images/5-Tracker.png
+ create mode 100644 02-lesson-plans/part-time/07-Week/03-Day/Images/6-Frodo.png
+ create mode 100644 02-lesson-plans/part-time/07-Week/03-Day/Images/6-childadded_2.png
+ create mode 100644 02-lesson-plans/part-time/07-Week/03-Day/Images/7-Tobias.png
+ create mode 100644 02-lesson-plans/part-time/07-Week/03-Day/Images/7-moment_1.png
+ create mode 100644 02-lesson-plans/part-time/07-Week/03-Day/Images/7-moment_2.png
+ create mode 100644 02-lesson-plans/part-time/07-Week/03-Day/Images/8-Set.png
+ create mode 100644 02-lesson-plans/part-time/07-Week/03-Day/Images/9-Smallpush.png
+ create mode 100644 02-lesson-plans/part-time/07-Week/README.md
+ create mode 100644 02-lesson-plans/part-time/08-Week/01-Day/Slide-Shows/API_Project_Week_1.pptx
+ create mode 100644 02-lesson-plans/part-time/08-Week/01-Day/Supplemental/API_Resources.docx
+ create mode 100644 02-lesson-plans/part-time/08-Week/01-Day/Supplemental/API_Resources.md
+ create mode 100644 02-lesson-plans/part-time/08-Week/02-Day/Slide-Shows/GitVisualized.pptx
+ create mode 100644 02-lesson-plans/part-time/08-Week/02-Day/Supplemental/GitPullGuide.docx
+ create mode 100644 02-lesson-plans/part-time/08-Week/03-Day/03-Day-Lessonplan.md
+ create mode 100644 02-lesson-plans/part-time/09-Week/01-Day/.gitkeep
+ create mode 100644 02-lesson-plans/part-time/09-Week/02-Day/.gitkeep
+ create mode 100644 02-lesson-plans/part-time/10-Week/01-Day/Images/1-Server_1.png
+ create mode 100644 02-lesson-plans/part-time/10-Week/01-Day/Images/1-Server_2.png
+ create mode 100644 02-lesson-plans/part-time/10-Week/01-Day/Images/10-Calculator.png
+ create mode 100644 02-lesson-plans/part-time/10-Week/01-Day/Images/11-Multiples.png
+ create mode 100644 02-lesson-plans/part-time/10-Week/01-Day/Images/11-Multiples_2.png
+ create mode 100644 02-lesson-plans/part-time/10-Week/01-Day/Images/12-Essentials_1.png
+ create mode 100644 02-lesson-plans/part-time/10-Week/01-Day/Images/12-Essentials_2.png
+ create mode 100644 02-lesson-plans/part-time/10-Week/01-Day/Images/12-Essentials_3.png
+ create mode 100644 02-lesson-plans/part-time/10-Week/01-Day/Images/13-Liri_1.png
+ create mode 100644 02-lesson-plans/part-time/10-Week/01-Day/Images/13-Liri_2.png
+ create mode 100644 02-lesson-plans/part-time/10-Week/01-Day/Images/2-Async_1.png
+ create mode 100644 02-lesson-plans/part-time/10-Week/01-Day/Images/2-Async_2.png
+ create mode 100644 02-lesson-plans/part-time/10-Week/01-Day/Images/3-TestingNode_1.png
+ create mode 100644 02-lesson-plans/part-time/10-Week/01-Day/Images/4-NodeHello.png
+ create mode 100644 02-lesson-plans/part-time/10-Week/01-Day/Images/5-NodeSriracha.png
+ create mode 100644 02-lesson-plans/part-time/10-Week/01-Day/Images/6-ProcessArgv.png
+ create mode 100644 02-lesson-plans/part-time/10-Week/01-Day/Images/7-ProcessArgvArray.png
+ create mode 100644 02-lesson-plans/part-time/10-Week/01-Day/Images/8-AddArgs_1.png
+ create mode 100644 02-lesson-plans/part-time/10-Week/01-Day/Images/8-AddArgs_2.png
+ create mode 100644 02-lesson-plans/part-time/10-Week/01-Day/Images/8-AddArgs_3.png
+ create mode 100644 02-lesson-plans/part-time/10-Week/01-Day/Images/8-AddArgs_4.png
+ create mode 100644 02-lesson-plans/part-time/10-Week/01-Day/Images/8-AddArgs_5.png
+ create mode 100644 02-lesson-plans/part-time/10-Week/01-Day/Images/9-ParameterCheck_1.png
+ create mode 100644 02-lesson-plans/part-time/10-Week/01-Day/Images/9-ParameterCheck_2.png
+ create mode 100644 02-lesson-plans/part-time/10-Week/01-Day/Images/9-ParameterCheck_3.png
+ create mode 100644 02-lesson-plans/part-time/10-Week/01-Day/Slide-Shows/Intro_node.pptx
+ create mode 100644 02-lesson-plans/part-time/10-Week/02-Day/Images/1-Equality_1.png
+ create mode 100644 02-lesson-plans/part-time/10-Week/02-Day/Images/1-Equality_2.png
+ create mode 100644 02-lesson-plans/part-time/10-Week/02-Day/Images/10-OMDB_1.png
+ create mode 100644 02-lesson-plans/part-time/10-Week/02-Day/Images/11-OMDBSolved_1.png
+ create mode 100644 02-lesson-plans/part-time/10-Week/02-Day/Images/11-OMDBSolved_2.png
+ create mode 100644 02-lesson-plans/part-time/10-Week/02-Day/Images/12-AsyncVsSync.png
+ create mode 100644 02-lesson-plans/part-time/10-Week/02-Day/Images/2-Write_1.png
+ create mode 100644 02-lesson-plans/part-time/10-Week/02-Day/Images/2-Write_2.png
+ create mode 100644 02-lesson-plans/part-time/10-Week/02-Day/Images/3-Read_1.png
+ create mode 100644 02-lesson-plans/part-time/10-Week/02-Day/Images/3-Read_2.png
+ create mode 100644 02-lesson-plans/part-time/10-Week/02-Day/Images/4-Docs_1.png
+ create mode 100644 02-lesson-plans/part-time/10-Week/02-Day/Images/4-Docs_2.png
+ create mode 100644 02-lesson-plans/part-time/10-Week/02-Day/Images/5-Best_1.png
+ create mode 100644 02-lesson-plans/part-time/10-Week/02-Day/Images/6-Append_1.png
+ create mode 100644 02-lesson-plans/part-time/10-Week/02-Day/Images/7-Bank_1.png
+ create mode 100644 02-lesson-plans/part-time/10-Week/02-Day/Images/7-Bank_2.png
+ create mode 100644 02-lesson-plans/part-time/10-Week/02-Day/Images/8-BankCode_1.png
+ create mode 100644 02-lesson-plans/part-time/10-Week/02-Day/Images/8-BankCode_2.png
+ create mode 100644 02-lesson-plans/part-time/10-Week/02-Day/Images/8-BankCode_3.png
+ create mode 100644 02-lesson-plans/part-time/10-Week/02-Day/Images/9-Request_1.png
+ create mode 100644 02-lesson-plans/part-time/10-Week/02-Day/Images/9-Request_2.png
+ create mode 100644 02-lesson-plans/part-time/10-Week/02-Day/Images/9-Request_3.png
+@hcardenas:05-2017-Class-Repository$ cd ../liri-node-app/
+@hcardenas:liri-node-app$ node liri.js 
+module.js:487
+    throw err;
+    ^
+
+Error: Cannot find module 'keys.js'
+    at Function.Module._resolveFilename (module.js:485:15)
+    at Function.Module._load (module.js:437:25)
+    at Module.require (module.js:513:17)
+    at require (internal/module.js:11:18)
+    at Object.<anonymous> (/Users/hcardenas/Documents/UCF-Cooding-Boot-Camp/liri-node-app/liri.js:1:73)
+    at Module._compile (module.js:569:30)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:503:32)
+    at tryModuleLoad (module.js:466:12)
+    at Function.Module._load (module.js:458:3)
+@hcardenas:liri-node-app$ node liri.js 
+this is loaded
+{ twitterKeys: 
+   { consumer_key: 'RpyL0K2fgbYxSeS1FnLgBfqQz',
+     consumer_secret: 'Yahrti4hOyl5vzfu9EFkd3bb1lFEVMsLv1xPyUxWOnFn9wz4Tn',
+     access_token_key: '893854715775250432-xWxXq6M6lf76hAeU58if9vhcTj8Y0wd',
+     access_token_secret: 'EjDVvuKvTWHj6S91kix3usvpnZSiujcvDEUIYWtJr0rQ6' } }
+@hcardenas:liri-node-app$ node liri.js 
+this is loaded
+[ '/usr/local/Cellar/node/8.1.4/bin/node',
+  '/Users/hcardenas/Documents/UCF-Cooding-Boot-Camp/liri-node-app/liri.js' ]
+@hcardenas:liri-node-app$ npm install --save node-spotify-api
+npm WARN saveError ENOENT: no such file or directory, open '/Users/hcardenas/Documents/UCF-Cooding-Boot-Camp/liri-node-app/package.json'
+npm notice created a lockfile as package-lock.json. You should commit this file.
+npm WARN enoent ENOENT: no such file or directory, open '/Users/hcardenas/Documents/UCF-Cooding-Boot-Camp/liri-node-app/package.json'
+npm WARN liri-node-app No description
+npm WARN liri-node-app No repository field.
+npm WARN liri-node-app No README data
+npm WARN liri-node-app No license field.
+
++ node-spotify-api@1.0.6
+added 61 packages in 4.232s
+@hcardenas:liri-node-app$ node liri.js 
+this is loaded
+[ '/usr/local/Cellar/node/8.1.4/bin/node',
+  '/Users/hcardenas/Documents/UCF-Cooding-Boot-Camp/liri-node-app/liri.js' ]
+/Users/hcardenas/Documents/UCF-Cooding-Boot-Camp/liri-node-app/liri.js:9
+  .search({ type: 'track', query: 'All the Small Things' })
+  ^
+
+TypeError: Cannot read property 'search' of undefined
+    at Object.<anonymous> (/Users/hcardenas/Documents/UCF-Cooding-Boot-Camp/liri-node-app/liri.js:9:3)
+    at Module._compile (module.js:569:30)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:503:32)
+    at tryModuleLoad (module.js:466:12)
+    at Function.Module._load (module.js:458:3)
+    at Function.Module.runMain (module.js:605:10)
+    at startup (bootstrap_node.js:158:16)
+    at bootstrap_node.js:575:3
+@hcardenas:liri-node-app$ node liri.js 
+this is loaded
+[Function: Spotify]
+@hcardenas:liri-node-app$ node liri.js 
+this is loaded
+{ twitterKeys: 
+   { consumer_key: 'RpyL0K2fgbYxSeS1FnLgBfqQz',
+     consumer_secret: 'Yahrti4hOyl5vzfu9EFkd3bb1lFEVMsLv1xPyUxWOnFn9wz4Tn',
+     access_token_key: '893854715775250432-xWxXq6M6lf76hAeU58if9vhcTj8Y0wd',
+     access_token_secret: 'EjDVvuKvTWHj6S91kix3usvpnZSiujcvDEUIYWtJr0rQ6' },
+  spotify: Spotify { search: [Function] } }
+@hcardenas:liri-node-app$ node liri.js 
+this is loaded
+{ twitterKeys: 
+   { consumer_key: 'RpyL0K2fgbYxSeS1FnLgBfqQz',
+     consumer_secret: 'Yahrti4hOyl5vzfu9EFkd3bb1lFEVMsLv1xPyUxWOnFn9wz4Tn',
+     access_token_key: '893854715775250432-xWxXq6M6lf76hAeU58if9vhcTj8Y0wd',
+     access_token_secret: 'EjDVvuKvTWHj6S91kix3usvpnZSiujcvDEUIYWtJr0rQ6' },
+  spotify: Spotify { search: [Function] } }
+{ tracks: 
+   { href: 'https://api.spotify.com/v1/search?query=All+the+Small+Things&type=track&offset=0&limit=20',
+     items: 
+      [ [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object] ],
+     limit: 20,
+     next: 'https://api.spotify.com/v1/search?query=All+the+Small+Things&type=track&offset=20&limit=20',
+     offset: 0,
+     previous: null,
+     total: 399 } }
+@hcardenas:liri-node-app$ node liri.js 
+this is loaded
+{ tracks: 
+   { href: 'https://api.spotify.com/v1/search?query=All+the+Small+Things&type=track&offset=0&limit=20',
+     items: 
+      [ [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object] ],
+     limit: 20,
+     next: 'https://api.spotify.com/v1/search?query=All+the+Small+Things&type=track&offset=20&limit=20',
+     offset: 0,
+     previous: null,
+     total: 399 } }
+@hcardenas:liri-node-app$ node liri.js 
+this is loaded
+{ tracks: 
+   { href: 'https://api.spotify.com/v1/search?query=The+Sign&type=track&offset=0&limit=20',
+     items: 
+      [ [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object] ],
+     limit: 20,
+     next: 'https://api.spotify.com/v1/search?query=The+Sign&type=track&offset=20&limit=20',
+     offset: 0,
+     previous: null,
+     total: 14509 } }
+@hcardenas:liri-node-app$ node liri.js 
+this is loaded
+{ tracks: 
+   { href: 'https://api.spotify.com/v1/search?query=All+the+Small+Things&type=track&offset=0&limit=20',
+     items: 
+      [ [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object] ],
+     limit: 20,
+     next: 'https://api.spotify.com/v1/search?query=All+the+Small+Things&type=track&offset=20&limit=20',
+     offset: 0,
+     previous: null,
+     total: 399 } }
+@hcardenas:liri-node-app$ node liri.js 
+this is loaded
+{ tracks: 
+   { href: 'https://api.spotify.com/v1/search?query=The+Sign&type=track&offset=0&limit=20',
+     items: 
+      [ [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object] ],
+     limit: 20,
+     next: 'https://api.spotify.com/v1/search?query=The+Sign&type=track&offset=20&limit=20',
+     offset: 0,
+     previous: null,
+     total: 14509 } }
+@hcardenas:liri-node-app$ node liri.js 
+this is loaded
+TypeError: Cannot read property '0' of undefined
+    at /Users/hcardenas/Documents/UCF-Cooding-Boot-Camp/liri-node-app/liri.js:13:30
+    at tryCatcher (/Users/hcardenas/Documents/UCF-Cooding-Boot-Camp/liri-node-app/node_modules/bluebird/js/release/util.js:16:23)
+    at Promise._settlePromiseFromHandler (/Users/hcardenas/Documents/UCF-Cooding-Boot-Camp/liri-node-app/node_modules/bluebird/js/release/promise.js:512:31)
+    at Promise._settlePromise (/Users/hcardenas/Documents/UCF-Cooding-Boot-Camp/liri-node-app/node_modules/bluebird/js/release/promise.js:569:18)
+    at Promise._settlePromise0 (/Users/hcardenas/Documents/UCF-Cooding-Boot-Camp/liri-node-app/node_modules/bluebird/js/release/promise.js:614:10)
+    at Promise._settlePromises (/Users/hcardenas/Documents/UCF-Cooding-Boot-Camp/liri-node-app/node_modules/bluebird/js/release/promise.js:693:18)
+    at Async._drainQueue (/Users/hcardenas/Documents/UCF-Cooding-Boot-Camp/liri-node-app/node_modules/bluebird/js/release/async.js:133:16)
+    at Async._drainQueues (/Users/hcardenas/Documents/UCF-Cooding-Boot-Camp/liri-node-app/node_modules/bluebird/js/release/async.js:143:10)
+    at Immediate.Async.drainQueues (/Users/hcardenas/Documents/UCF-Cooding-Boot-Camp/liri-node-app/node_modules/bluebird/js/release/async.js:17:14)
+    at runCallback (timers.js:800:20)
+    at tryOnImmediate (timers.js:762:5)
+    at processImmediate [as _immediateCallback] (timers.js:733:5)
+@hcardenas:liri-node-app$ node liri.js 
+this is loaded
+{ href: 'https://api.spotify.com/v1/search?query=The+Sign&type=track&offset=0&limit=20',
+  items: 
+   [ { album: [Object],
+       artists: [Array],
+       available_markets: [Array],
+       disc_number: 1,
+       duration_ms: 340706,
+       explicit: false,
+       external_ids: [Object],
+       external_urls: [Object],
+       href: 'https://api.spotify.com/v1/tracks/5ELRkzdzz0HvGpMDlfZHkV',
+       id: '5ELRkzdzz0HvGpMDlfZHkV',
+       name: 'Sign of the Times',
+       popularity: 86,
+       preview_url: 'https://p.scdn.co/mp3-preview/9801b9239ad1b833f1317574ee55b9d7b8426ff1?cid=83ecdeb585e1458d9a5586eb14617fbd',
+       track_number: 1,
+       type: 'track',
+       uri: 'spotify:track:5ELRkzdzz0HvGpMDlfZHkV' },
+     { album: [Object],
+       artists: [Array],
+       available_markets: [Array],
+       disc_number: 1,
+       duration_ms: 340706,
+       explicit: false,
+       external_ids: [Object],
+       external_urls: [Object],
+       href: 'https://api.spotify.com/v1/tracks/5Ohxk2dO5COHF1krpoPigN',
+       id: '5Ohxk2dO5COHF1krpoPigN',
+       name: 'Sign of the Times',
+       popularity: 85,
+       preview_url: 'https://p.scdn.co/mp3-preview/af237206f611b722f48620ece049aff3b8650e77?cid=83ecdeb585e1458d9a5586eb14617fbd',
+       track_number: 2,
+       type: 'track',
+       uri: 'spotify:track:5Ohxk2dO5COHF1krpoPigN' },
+     { album: [Object],
+       artists: [Array],
+       available_markets: [Array],
+       disc_number: 1,
+       duration_ms: 242983,
+       explicit: true,
+       external_ids: [Object],
+       external_urls: [Object],
+       href: 'https://api.spotify.com/v1/tracks/7t2bFihaDvhIrd2gn2CWJO',
+       id: '7t2bFihaDvhIrd2gn2CWJO',
+       name: 'Or Nah (feat. The Weeknd, Wiz Khalifa and DJ Mustard) - Remix',
+       popularity: 80,
+       preview_url: 'https://p.scdn.co/mp3-preview/70f126c139847335bc03c756c55b80c99892268e?cid=83ecdeb585e1458d9a5586eb14617fbd',
+       track_number: 1,
+       type: 'track',
+       uri: 'spotify:track:7t2bFihaDvhIrd2gn2CWJO' },
+     { album: [Object],
+       artists: [Array],
+       available_markets: [Array],
+       disc_number: 1,
+       duration_ms: 182833,
+       explicit: true,
+       external_ids: [Object],
+       external_urls: [Object],
+       href: 'https://api.spotify.com/v1/tracks/0rlFL6bxIWcCn9gk9GExFA',
+       id: '0rlFL6bxIWcCn9gk9GExFA',
+       name: 'Love U Better (feat. Lil Wayne & The-Dream)',
+       popularity: 79,
+       preview_url: 'https://p.scdn.co/mp3-preview/9ef6e0e3e32b4220ac4ed1539ac1e4a47bf34d5d?cid=83ecdeb585e1458d9a5586eb14617fbd',
+       track_number: 1,
+       type: 'track',
+       uri: 'spotify:track:0rlFL6bxIWcCn9gk9GExFA' },
+     { album: [Object],
+       artists: [Array],
+       available_markets: [Array],
+       disc_number: 1,
+       duration_ms: 245520,
+       explicit: true,
+       external_ids: [Object],
+       external_urls: [Object],
+       href: 'https://api.spotify.com/v1/tracks/3WjyiSbfR74pjWXQ3IaFKJ',
+       id: '3WjyiSbfR74pjWXQ3IaFKJ',
+       name: 'Impatient',
+       popularity: 71,
+       preview_url: null,
+       track_number: 3,
+       type: 'track',
+       uri: 'spotify:track:3WjyiSbfR74pjWXQ3IaFKJ' },
+     { album: [Object],
+       artists: [Array],
+       available_markets: [Array],
+       disc_number: 1,
+       duration_ms: 191240,
+       explicit: false,
+       external_ids: [Object],
+       external_urls: [Object],
+       href: 'https://api.spotify.com/v1/tracks/0hrBpAOgrt8RXigk83LLNE',
+       id: '0hrBpAOgrt8RXigk83LLNE',
+       name: 'The Sign',
+       popularity: 68,
+       preview_url: 'https://p.scdn.co/mp3-preview/4c463359f67dd3546db7294d236dd0ae991882ff?cid=83ecdeb585e1458d9a5586eb14617fbd',
+       track_number: 4,
+       type: 'track',
+       uri: 'spotify:track:0hrBpAOgrt8RXigk83LLNE' },
+     { album: [Object],
+       artists: [Array],
+       available_markets: [Array],
+       disc_number: 1,
+       duration_ms: 480186,
+       explicit: true,
+       external_ids: [Object],
+       external_urls: [Object],
+       href: 'https://api.spotify.com/v1/tracks/2lpygKqzPFtItQ4ss3cgfb',
+       id: '2lpygKqzPFtItQ4ss3cgfb',
+       name: 'Cinderella (feat. Ty Dolla $ign)',
+       popularity: 70,
+       preview_url: 'https://p.scdn.co/mp3-preview/1f797d8ec6a6ca7dd84d9a6d496bc92748d24557?cid=83ecdeb585e1458d9a5586eb14617fbd',
+       track_number: 5,
+       type: 'track',
+       uri: 'spotify:track:2lpygKqzPFtItQ4ss3cgfb' },
+     { album: [Object],
+       artists: [Array],
+       available_markets: [Array],
+       disc_number: 1,
+       duration_ms: 295026,
+       explicit: true,
+       external_ids: [Object],
+       external_urls: [Object],
+       href: 'https://api.spotify.com/v1/tracks/4dH71jhtwivDcv0nSzzxkM',
+       id: '4dH71jhtwivDcv0nSzzxkM',
+       name: 'We Could Be Free',
+       popularity: 64,
+       preview_url: null,
+       track_number: 13,
+       type: 'track',
+       uri: 'spotify:track:4dH71jhtwivDcv0nSzzxkM' },
+     { album: [Object],
+       artists: [Array],
+       available_markets: [Array],
+       disc_number: 1,
+       duration_ms: 263141,
+       explicit: true,
+       external_ids: [Object],
+       external_urls: [Object],
+       href: 'https://api.spotify.com/v1/tracks/6hYdhO1BF8V03tuF8pADKP',
+       id: '6hYdhO1BF8V03tuF8pADKP',
+       name: 'Or Nah (feat. Wiz Khalifa) - Live from The Village, Los Angeles',
+       popularity: 71,
+       preview_url: 'https://p.scdn.co/mp3-preview/4d7e630288b2ba0edd9678c2c186dcc7db3cfb73?cid=83ecdeb585e1458d9a5586eb14617fbd',
+       track_number: 3,
+       type: 'track',
+       uri: 'spotify:track:6hYdhO1BF8V03tuF8pADKP' },
+     { album: [Object],
+       artists: [Array],
+       available_markets: [Array],
+       disc_number: 1,
+       duration_ms: 243490,
+       explicit: true,
+       external_ids: [Object],
+       external_urls: [Object],
+       href: 'https://api.spotify.com/v1/tracks/7qUJQSNX9QNf46CC6FgH66',
+       id: '7qUJQSNX9QNf46CC6FgH66',
+       name: 'Sucker For Pain (with Wiz Khalifa, Imagine Dragons, Logic & Ty Dolla $ign feat. X Ambassadors)',
+       popularity: 73,
+       preview_url: 'https://p.scdn.co/mp3-preview/96f9689e58c4d6188cc269c0c2089036c3817a2e?cid=83ecdeb585e1458d9a5586eb14617fbd',
+       track_number: 2,
+       type: 'track',
+       uri: 'spotify:track:7qUJQSNX9QNf46CC6FgH66' },
+     { album: [Object],
+       artists: [Array],
+       available_markets: [Array],
+       disc_number: 1,
+       duration_ms: 206566,
+       explicit: false,
+       external_ids: [Object],
+       external_urls: [Object],
+       href: 'https://api.spotify.com/v1/tracks/7zBQRGpYImAdIZc97FNj3V',
+       id: '7zBQRGpYImAdIZc97FNj3V',
+       name: 'Shell Shocked (feat. Kill The Noise & Madsonik) - From "Teenage Mutant Ninja Turtles"',
+       popularity: 68,
+       preview_url: 'https://p.scdn.co/mp3-preview/26fa73b8c2e9ce91efb44fad48c5a38b2e48dc11?cid=83ecdeb585e1458d9a5586eb14617fbd',
+       track_number: 1,
+       type: 'track',
+       uri: 'spotify:track:7zBQRGpYImAdIZc97FNj3V' },
+     { album: [Object],
+       artists: [Array],
+       available_markets: [Array],
+       disc_number: 1,
+       duration_ms: 230016,
+       explicit: true,
+       external_ids: [Object],
+       external_urls: [Object],
+       href: 'https://api.spotify.com/v1/tracks/5IdQEHgtmj9th3OkfQKhf8',
+       id: '5IdQEHgtmj9th3OkfQKhf8',
+       name: 'Blessings',
+       popularity: 69,
+       preview_url: 'https://p.scdn.co/mp3-preview/ca5047ad569d9860b850475f22cb482c8240e7a2?cid=83ecdeb585e1458d9a5586eb14617fbd',
+       track_number: 14,
+       type: 'track',
+       uri: 'spotify:track:5IdQEHgtmj9th3OkfQKhf8' },
+     { album: [Object],
+       artists: [Array],
+       available_markets: [Array],
+       disc_number: 1,
+       duration_ms: 206240,
+       explicit: false,
+       external_ids: [Object],
+       external_urls: [Object],
+       href: 'https://api.spotify.com/v1/tracks/284b45rER2dZCBVCkCQNEk',
+       id: '284b45rER2dZCBVCkCQNEk',
+       name: 'One For Me',
+       popularity: 67,
+       preview_url: 'https://p.scdn.co/mp3-preview/a4f42926a953f9139d63422e1db9cae47e0449be?cid=83ecdeb585e1458d9a5586eb14617fbd',
+       track_number: 6,
+       type: 'track',
+       uri: 'spotify:track:284b45rER2dZCBVCkCQNEk' },
+     { album: [Object],
+       artists: [Array],
+       available_markets: [Array],
+       disc_number: 1,
+       duration_ms: 253269,
+       explicit: false,
+       external_ids: [Object],
+       external_urls: [Object],
+       href: 'https://api.spotify.com/v1/tracks/3h0RJYaohnvXg5SmWD1dZF',
+       id: '3h0RJYaohnvXg5SmWD1dZF',
+       name: 'Sign of the Times',
+       popularity: 64,
+       preview_url: 'https://p.scdn.co/mp3-preview/547f1695e87f17b0b8deb67634d4ccadb75d22ae?cid=83ecdeb585e1458d9a5586eb14617fbd',
+       track_number: 1,
+       type: 'track',
+       uri: 'spotify:track:3h0RJYaohnvXg5SmWD1dZF' },
+     { album: [Object],
+       artists: [Array],
+       available_markets: [Array],
+       disc_number: 1,
+       duration_ms: 210826,
+       explicit: true,
+       external_ids: [Object],
+       external_urls: [Object],
+       href: 'https://api.spotify.com/v1/tracks/3vSrDgfNhlQRwKXJpl1DYo',
+       id: '3vSrDgfNhlQRwKXJpl1DYo',
+       name: 'Hanging Up My Jersey',
+       popularity: 60,
+       preview_url: 'https://p.scdn.co/mp3-preview/d9ded55ec6e478c9b68eb206e9f5714440c2c693?cid=83ecdeb585e1458d9a5586eb14617fbd',
+       track_number: 8,
+       type: 'track',
+       uri: 'spotify:track:3vSrDgfNhlQRwKXJpl1DYo' },
+     { album: [Object],
+       artists: [Array],
+       available_markets: [Array],
+       disc_number: 1,
+       duration_ms: 331133,
+       explicit: false,
+       external_ids: [Object],
+       external_urls: [Object],
+       href: 'https://api.spotify.com/v1/tracks/4bPkBHKLKd9WHizsvM2zV3',
+       id: '4bPkBHKLKd9WHizsvM2zV3',
+       name: 'Warning Sign',
+       popularity: 63,
+       preview_url: 'https://p.scdn.co/mp3-preview/aa7d87a8e2ac9aa7261c7640548a18930572043d?cid=83ecdeb585e1458d9a5586eb14617fbd',
+       track_number: 8,
+       type: 'track',
+       uri: 'spotify:track:4bPkBHKLKd9WHizsvM2zV3' },
+     { album: [Object],
+       artists: [Array],
+       available_markets: [Array],
+       disc_number: 1,
+       duration_ms: 211213,
+       explicit: false,
+       external_ids: [Object],
+       external_urls: [Object],
+       href: 'https://api.spotify.com/v1/tracks/6kWJvPfC4DgUpRsXKNa9z9',
+       id: '6kWJvPfC4DgUpRsXKNa9z9',
+       name: 'All That She Wants',
+       popularity: 66,
+       preview_url: 'https://p.scdn.co/mp3-preview/b176774bc04182501c2d5d201afda143b1193f31?cid=83ecdeb585e1458d9a5586eb14617fbd',
+       track_number: 1,
+       type: 'track',
+       uri: 'spotify:track:6kWJvPfC4DgUpRsXKNa9z9' },
+     { album: [Object],
+       artists: [Array],
+       available_markets: [Array],
+       disc_number: 1,
+       duration_ms: 228750,
+       explicit: true,
+       external_ids: [Object],
+       external_urls: [Object],
+       href: 'https://api.spotify.com/v1/tracks/2NAZcL9tLUkdMMb5v3xFVG',
+       id: '2NAZcL9tLUkdMMb5v3xFVG',
+       name: 'Blasé (feat. Future & Rae Sremmurd) - Louis The Child Remix',
+       popularity: 59,
+       preview_url: 'https://p.scdn.co/mp3-preview/e5c3f24261752767005a5d10ae251f3a52e84319?cid=83ecdeb585e1458d9a5586eb14617fbd',
+       track_number: 1,
+       type: 'track',
+       uri: 'spotify:track:2NAZcL9tLUkdMMb5v3xFVG' },
+     { album: [Object],
+       artists: [Array],
+       available_markets: [Array],
+       disc_number: 1,
+       duration_ms: 186447,
+       explicit: true,
+       external_ids: [Object],
+       external_urls: [Object],
+       href: 'https://api.spotify.com/v1/tracks/2nxUXNkrivJIBvrNWqud9s',
+       id: '2nxUXNkrivJIBvrNWqud9s',
+       name: 'Boom',
+       popularity: 60,
+       preview_url: 'https://p.scdn.co/mp3-preview/c75296ad381abcd4ad558189e588dd698e3c0eb5?cid=83ecdeb585e1458d9a5586eb14617fbd',
+       track_number: 11,
+       type: 'track',
+       uri: 'spotify:track:2nxUXNkrivJIBvrNWqud9s' },
+     { album: [Object],
+       artists: [Array],
+       available_markets: [Array],
+       disc_number: 1,
+       duration_ms: 189786,
+       explicit: false,
+       external_ids: [Object],
+       external_urls: [Object],
+       href: 'https://api.spotify.com/v1/tracks/3DYVWvPh3kGwPasp7yjahc',
+       id: '3DYVWvPh3kGwPasp7yjahc',
+       name: 'The Sign',
+       popularity: 61,
+       preview_url: 'https://p.scdn.co/mp3-preview/5ca0168d6b58e0f993b2b741af90ecc7c9b16893?cid=83ecdeb585e1458d9a5586eb14617fbd',
+       track_number: 1,
+       type: 'track',
+       uri: 'spotify:track:3DYVWvPh3kGwPasp7yjahc' } ],
+  limit: 20,
+  next: 'https://api.spotify.com/v1/search?query=The+Sign&type=track&offset=20&limit=20',
+  offset: 0,
+  previous: null,
+  total: 14509 }
+@hcardenas:liri-node-app$ node liri.js 
+this is loaded
+[ { album: 
+     { album_type: 'single',
+       artists: [Array],
+       available_markets: [Array],
+       external_urls: [Object],
+       href: 'https://api.spotify.com/v1/albums/6YDkzHVTEzMXZOVd1r5NqR',
+       id: '6YDkzHVTEzMXZOVd1r5NqR',
+       images: [Array],
+       name: 'Sign of the Times',
+       type: 'album',
+       uri: 'spotify:album:6YDkzHVTEzMXZOVd1r5NqR' },
+    artists: [ [Object] ],
+    available_markets: 
+     [ 'AD',
+       'AR',
+       'AT',
+       'AU',
+       'BE',
+       'BG',
+       'BO',
+       'BR',
+       'CA',
+       'CH',
+       'CL',
+       'CO',
+       'CR',
+       'CY',
+       'CZ',
+       'DE',
+       'DK',
+       'DO',
+       'EC',
+       'EE',
+       'ES',
+       'FI',
+       'FR',
+       'GB',
+       'GR',
+       'GT',
+       'HK',
+       'HN',
+       'HU',
+       'ID',
+       'IE',
+       'IS',
+       'IT',
+       'JP',
+       'LI',
+       'LT',
+       'LU',
+       'LV',
+       'MC',
+       'MT',
+       'MX',
+       'MY',
+       'NI',
+       'NL',
+       'NO',
+       'NZ',
+       'PA',
+       'PE',
+       'PH',
+       'PL',
+       'PT',
+       'PY',
+       'SG',
+       'SK',
+       'SV',
+       'TR',
+       'TW',
+       'US',
+       'UY' ],
+    disc_number: 1,
+    duration_ms: 340706,
+    explicit: false,
+    external_ids: { isrc: 'USSM11703595' },
+    external_urls: { spotify: 'https://open.spotify.com/track/5ELRkzdzz0HvGpMDlfZHkV' },
+    href: 'https://api.spotify.com/v1/tracks/5ELRkzdzz0HvGpMDlfZHkV',
+    id: '5ELRkzdzz0HvGpMDlfZHkV',
+    name: 'Sign of the Times',
+    popularity: 86,
+    preview_url: 'https://p.scdn.co/mp3-preview/9801b9239ad1b833f1317574ee55b9d7b8426ff1?cid=83ecdeb585e1458d9a5586eb14617fbd',
+    track_number: 1,
+    type: 'track',
+    uri: 'spotify:track:5ELRkzdzz0HvGpMDlfZHkV' },
+  { album: 
+     { album_type: 'album',
+       artists: [Array],
+       available_markets: [Array],
+       external_urls: [Object],
+       href: 'https://api.spotify.com/v1/albums/1FZKIm3JVDCxTchXDo5jOV',
+       id: '1FZKIm3JVDCxTchXDo5jOV',
+       images: [Array],
+       name: 'Harry Styles',
+       type: 'album',
+       uri: 'spotify:album:1FZKIm3JVDCxTchXDo5jOV' },
+    artists: [ [Object] ],
+    available_markets: 
+     [ 'AD',
+       'AR',
+       'AT',
+       'AU',
+       'BE',
+       'BG',
+       'BO',
+       'BR',
+       'CA',
+       'CH',
+       'CL',
+       'CO',
+       'CR',
+       'CY',
+       'CZ',
+       'DE',
+       'DK',
+       'DO',
+       'EC',
+       'EE',
+       'ES',
+       'FI',
+       'FR',
+       'GB',
+       'GR',
+       'GT',
+       'HK',
+       'HN',
+       'HU',
+       'ID',
+       'IE',
+       'IS',
+       'IT',
+       'JP',
+       'LI',
+       'LT',
+       'LU',
+       'LV',
+       'MC',
+       'MT',
+       'MX',
+       'MY',
+       'NI',
+       'NL',
+       'NO',
+       'NZ',
+       'PA',
+       'PE',
+       'PH',
+       'PL',
+       'PT',
+       'PY',
+       'SE',
+       'SG',
+       'SK',
+       'SV',
+       'TR',
+       'TW',
+       'US',
+       'UY' ],
+    disc_number: 1,
+    duration_ms: 340706,
+    explicit: false,
+    external_ids: { isrc: 'USSM11703595' },
+    external_urls: { spotify: 'https://open.spotify.com/track/5Ohxk2dO5COHF1krpoPigN' },
+    href: 'https://api.spotify.com/v1/tracks/5Ohxk2dO5COHF1krpoPigN',
+    id: '5Ohxk2dO5COHF1krpoPigN',
+    name: 'Sign of the Times',
+    popularity: 85,
+    preview_url: 'https://p.scdn.co/mp3-preview/af237206f611b722f48620ece049aff3b8650e77?cid=83ecdeb585e1458d9a5586eb14617fbd',
+    track_number: 2,
+    type: 'track',
+    uri: 'spotify:track:5Ohxk2dO5COHF1krpoPigN' },
+  { album: 
+     { album_type: 'single',
+       artists: [Array],
+       available_markets: [Array],
+       external_urls: [Object],
+       href: 'https://api.spotify.com/v1/albums/3SHx7bBQFI4J8QRr6D5cOK',
+       id: '3SHx7bBQFI4J8QRr6D5cOK',
+       images: [Array],
+       name: 'Or Nah (feat. The Weeknd, Wiz Khalifa and DJ Mustard) [Remix Version]',
+       type: 'album',
+       uri: 'spotify:album:3SHx7bBQFI4J8QRr6D5cOK' },
+    artists: [ [Object], [Object], [Object], [Object] ],
+    available_markets: 
+     [ 'AD',
+       'AR',
+       'AT',
+       'BE',
+       'BG',
+       'BO',
+       'BR',
+       'CA',
+       'CH',
+       'CL',
+       'CO',
+       'CR',
+       'CY',
+       'CZ',
+       'DE',
+       'DK',
+       'DO',
+       'EC',
+       'EE',
+       'ES',
+       'FI',
+       'FR',
+       'GB',
+       'GR',
+       'GT',
+       'HK',
+       'HN',
+       'HU',
+       'ID',
+       'IE',
+       'IS',
+       'IT',
+       'JP',
+       'LT',
+       'LU',
+       'LV',
+       'MC',
+       'MT',
+       'MX',
+       'MY',
+       'NI',
+       'NL',
+       'NO',
+       'NZ',
+       'PA',
+       'PE',
+       'PH',
+       'PL',
+       'PT',
+       'PY',
+       'SE',
+       'SG',
+       'SK',
+       'SV',
+       'TR',
+       'TW',
+       'US',
+       'UY' ],
+    disc_number: 1,
+    duration_ms: 242983,
+    explicit: true,
+    external_ids: { isrc: 'USAT21401391' },
+    external_urls: { spotify: 'https://open.spotify.com/track/7t2bFihaDvhIrd2gn2CWJO' },
+    href: 'https://api.spotify.com/v1/tracks/7t2bFihaDvhIrd2gn2CWJO',
+    id: '7t2bFihaDvhIrd2gn2CWJO',
+    name: 'Or Nah (feat. The Weeknd, Wiz Khalifa and DJ Mustard) - Remix',
+    popularity: 80,
+    preview_url: 'https://p.scdn.co/mp3-preview/70f126c139847335bc03c756c55b80c99892268e?cid=83ecdeb585e1458d9a5586eb14617fbd',
+    track_number: 1,
+    type: 'track',
+    uri: 'spotify:track:7t2bFihaDvhIrd2gn2CWJO' },
+  { album: 
+     { album_type: 'single',
+       artists: [Array],
+       available_markets: [Array],
+       external_urls: [Object],
+       href: 'https://api.spotify.com/v1/albums/4JOmaYVONjOFGdgvePxlAh',
+       id: '4JOmaYVONjOFGdgvePxlAh',
+       images: [Array],
+       name: 'Love U Better (feat. Lil Wayne & The-Dream)',
+       type: 'album',
+       uri: 'spotify:album:4JOmaYVONjOFGdgvePxlAh' },
+    artists: [ [Object], [Object], [Object] ],
+    available_markets: 
+     [ 'AD',
+       'AR',
+       'AT',
+       'AU',
+       'BE',
+       'BG',
+       'BO',
+       'BR',
+       'CA',
+       'CH',
+       'CL',
+       'CO',
+       'CR',
+       'CY',
+       'CZ',
+       'DE',
+       'DK',
+       'DO',
+       'EC',
+       'EE',
+       'ES',
+       'FI',
+       'FR',
+       'GB',
+       'GR',
+       'GT',
+       'HK',
+       'HN',
+       'HU',
+       'ID',
+       'IE',
+       'IS',
+       'IT',
+       'JP',
+       'LI',
+       'LT',
+       'LU',
+       'LV',
+       'MC',
+       'MT',
+       'MX',
+       'MY',
+       'NI',
+       'NL',
+       'NO',
+       'NZ',
+       'PA',
+       'PE',
+       'PH',
+       'PL',
+       'PT',
+       'PY',
+       'SE',
+       'SG',
+       'SK',
+       'SV',
+       'TR',
+       'TW',
+       'US',
+       'UY' ],
+    disc_number: 1,
+    duration_ms: 182833,
+    explicit: true,
+    external_ids: { isrc: 'USAT21702235' },
+    external_urls: { spotify: 'https://open.spotify.com/track/0rlFL6bxIWcCn9gk9GExFA' },
+    href: 'https://api.spotify.com/v1/tracks/0rlFL6bxIWcCn9gk9GExFA',
+    id: '0rlFL6bxIWcCn9gk9GExFA',
+    name: 'Love U Better (feat. Lil Wayne & The-Dream)',
+    popularity: 79,
+    preview_url: 'https://p.scdn.co/mp3-preview/9ef6e0e3e32b4220ac4ed1539ac1e4a47bf34d5d?cid=83ecdeb585e1458d9a5586eb14617fbd',
+    track_number: 1,
+    type: 'track',
+    uri: 'spotify:track:0rlFL6bxIWcCn9gk9GExFA' },
+  { album: 
+     { album_type: 'album',
+       artists: [Array],
+       available_markets: [Array],
+       external_urls: [Object],
+       href: 'https://api.spotify.com/v1/albums/7DMyQuDPe8xzjC0UDSDa96',
+       id: '7DMyQuDPe8xzjC0UDSDa96',
+       images: [Array],
+       name: 'Late Nights: The Album',
+       type: 'album',
+       uri: 'spotify:album:7DMyQuDPe8xzjC0UDSDa96' },
+    artists: [ [Object], [Object] ],
+    available_markets: [ 'CA', 'MX', 'US' ],
+    disc_number: 1,
+    duration_ms: 245520,
+    explicit: true,
+    external_ids: { isrc: 'USUM71517405' },
+    external_urls: { spotify: 'https://open.spotify.com/track/3WjyiSbfR74pjWXQ3IaFKJ' },
+    href: 'https://api.spotify.com/v1/tracks/3WjyiSbfR74pjWXQ3IaFKJ',
+    id: '3WjyiSbfR74pjWXQ3IaFKJ',
+    name: 'Impatient',
+    popularity: 71,
+    preview_url: null,
+    track_number: 3,
+    type: 'track',
+    uri: 'spotify:track:3WjyiSbfR74pjWXQ3IaFKJ' },
+  { album: 
+     { album_type: 'album',
+       artists: [Array],
+       available_markets: [Array],
+       external_urls: [Object],
+       href: 'https://api.spotify.com/v1/albums/5UwIyIyFzkM7wKeGtRJPgB',
+       id: '5UwIyIyFzkM7wKeGtRJPgB',
+       images: [Array],
+       name: 'The Sign (US Album) [Remastered]',
+       type: 'album',
+       uri: 'spotify:album:5UwIyIyFzkM7wKeGtRJPgB' },
+    artists: [ [Object] ],
+    available_markets: 
+     [ 'AD',
+       'AR',
+       'AT',
+       'AU',
+       'BE',
+       'BG',
+       'BO',
+       'BR',
+       'CA',
+       'CH',
+       'CL',
+       'CO',
+       'CR',
+       'CY',
+       'CZ',
+       'DE',
+       'DK',
+       'DO',
+       'EC',
+       'EE',
+       'ES',
+       'FI',
+       'FR',
+       'GB',
+       'GR',
+       'GT',
+       'HK',
+       'HN',
+       'HU',
+       'ID',
+       'IE',
+       'IS',
+       'IT',
+       'JP',
+       'LI',
+       'LT',
+       'LU',
+       'LV',
+       'MC',
+       'MT',
+       'MX',
+       'MY',
+       'NI',
+       'NL',
+       'NO',
+       'NZ',
+       'PA',
+       'PE',
+       'PH',
+       'PL',
+       'PT',
+       'PY',
+       'SE',
+       'SG',
+       'SK',
+       'SV',
+       'TR',
+       'TW',
+       'US',
+       'UY' ],
+    disc_number: 1,
+    duration_ms: 191240,
+    explicit: false,
+    external_ids: { isrc: 'SEVJH0803404' },
+    external_urls: { spotify: 'https://open.spotify.com/track/0hrBpAOgrt8RXigk83LLNE' },
+    href: 'https://api.spotify.com/v1/tracks/0hrBpAOgrt8RXigk83LLNE',
+    id: '0hrBpAOgrt8RXigk83LLNE',
+    name: 'The Sign',
+    popularity: 68,
+    preview_url: 'https://p.scdn.co/mp3-preview/4c463359f67dd3546db7294d236dd0ae991882ff?cid=83ecdeb585e1458d9a5586eb14617fbd',
+    track_number: 4,
+    type: 'track',
+    uri: 'spotify:track:0hrBpAOgrt8RXigk83LLNE' },
+  { album: 
+     { album_type: 'album',
+       artists: [Array],
+       available_markets: [Array],
+       external_urls: [Object],
+       href: 'https://api.spotify.com/v1/albums/6f6tko6NWoH00cyFOl4VYQ',
+       id: '6f6tko6NWoH00cyFOl4VYQ',
+       images: [Array],
+       name: 'The Divine Feminine',
+       type: 'album',
+       uri: 'spotify:album:6f6tko6NWoH00cyFOl4VYQ' },
+    artists: [ [Object], [Object] ],
+    available_markets: 
+     [ 'AD',
+       'AR',
+       'AT',
+       'AU',
+       'BE',
+       'BG',
+       'BO',
+       'BR',
+       'CA',
+       'CH',
+       'CL',
+       'CO',
+       'CR',
+       'CY',
+       'CZ',
+       'DE',
+       'DK',
+       'DO',
+       'EC',
+       'EE',
+       'ES',
+       'FI',
+       'FR',
+       'GB',
+       'GR',
+       'GT',
+       'HK',
+       'HN',
+       'HU',
+       'ID',
+       'IE',
+       'IS',
+       'IT',
+       'JP',
+       'LI',
+       'LT',
+       'LU',
+       'LV',
+       'MC',
+       'MT',
+       'MX',
+       'MY',
+       'NI',
+       'NL',
+       'NO',
+       'NZ',
+       'PA',
+       'PE',
+       'PH',
+       'PL',
+       'PT',
+       'PY',
+       'SE',
+       'SG',
+       'SK',
+       'SV',
+       'TR',
+       'TW',
+       'US',
+       'UY' ],
+    disc_number: 1,
+    duration_ms: 480186,
+    explicit: true,
+    external_ids: { isrc: 'USWB11601437' },
+    external_urls: { spotify: 'https://open.spotify.com/track/2lpygKqzPFtItQ4ss3cgfb' },
+    href: 'https://api.spotify.com/v1/tracks/2lpygKqzPFtItQ4ss3cgfb',
+    id: '2lpygKqzPFtItQ4ss3cgfb',
+    name: 'Cinderella (feat. Ty Dolla $ign)',
+    popularity: 70,
+    preview_url: 'https://p.scdn.co/mp3-preview/1f797d8ec6a6ca7dd84d9a6d496bc92748d24557?cid=83ecdeb585e1458d9a5586eb14617fbd',
+    track_number: 5,
+    type: 'track',
+    uri: 'spotify:track:2lpygKqzPFtItQ4ss3cgfb' },
+  { album: 
+     { album_type: 'album',
+       artists: [Array],
+       available_markets: [Array],
+       external_urls: [Object],
+       href: 'https://api.spotify.com/v1/albums/6NySuONTKK6mtLG0nF80Jr',
+       id: '6NySuONTKK6mtLG0nF80Jr',
+       images: [Array],
+       name: 'The Autobiography',
+       type: 'album',
+       uri: 'spotify:album:6NySuONTKK6mtLG0nF80Jr' },
+    artists: [ [Object], [Object] ],
+    available_markets: [ 'CA', 'MX', 'US' ],
+    disc_number: 1,
+    duration_ms: 295026,
+    explicit: true,
+    external_ids: { isrc: 'QMJMT1701294' },
+    external_urls: { spotify: 'https://open.spotify.com/track/4dH71jhtwivDcv0nSzzxkM' },
+    href: 'https://api.spotify.com/v1/tracks/4dH71jhtwivDcv0nSzzxkM',
+    id: '4dH71jhtwivDcv0nSzzxkM',
+    name: 'We Could Be Free',
+    popularity: 64,
+    preview_url: null,
+    track_number: 13,
+    type: 'track',
+    uri: 'spotify:track:4dH71jhtwivDcv0nSzzxkM' },
+  { album: 
+     { album_type: 'album',
+       artists: [Array],
+       available_markets: [Array],
+       external_urls: [Object],
+       href: 'https://api.spotify.com/v1/albums/06fX7PRgASxHLhhn9F4fXH',
+       id: '06fX7PRgASxHLhhn9F4fXH',
+       images: [Array],
+       name: 'Spotify Session',
+       type: 'album',
+       uri: 'spotify:album:06fX7PRgASxHLhhn9F4fXH' },
+    artists: [ [Object], [Object] ],
+    available_markets: 
+     [ 'AD',
+       'AR',
+       'AT',
+       'AU',
+       'BE',
+       'BG',
+       'BO',
+       'BR',
+       'CA',
+       'CH',
+       'CL',
+       'CO',
+       'CR',
+       'CY',
+       'CZ',
+       'DE',
+       'DK',
+       'DO',
+       'EC',
+       'EE',
+       'ES',
+       'FI',
+       'FR',
+       'GB',
+       'GR',
+       'GT',
+       'HK',
+       'HN',
+       'HU',
+       'ID',
+       'IE',
+       'IS',
+       'IT',
+       'JP',
+       'LI',
+       'LT',
+       'LU',
+       'LV',
+       'MC',
+       'MT',
+       'MX',
+       'MY',
+       'NI',
+       'NL',
+       'NO',
+       'NZ',
+       'PA',
+       'PE',
+       'PH',
+       'PL',
+       'PT',
+       'PY',
+       'SE',
+       'SG',
+       'SK',
+       'SV',
+       'TR',
+       'TW',
+       'US',
+       'UY' ],
+    disc_number: 1,
+    duration_ms: 263141,
+    explicit: true,
+    external_ids: { isrc: 'USAT21600600' },
+    external_urls: { spotify: 'https://open.spotify.com/track/6hYdhO1BF8V03tuF8pADKP' },
+    href: 'https://api.spotify.com/v1/tracks/6hYdhO1BF8V03tuF8pADKP',
+    id: '6hYdhO1BF8V03tuF8pADKP',
+    name: 'Or Nah (feat. Wiz Khalifa) - Live from The Village, Los Angeles',
+    popularity: 71,
+    preview_url: 'https://p.scdn.co/mp3-preview/4d7e630288b2ba0edd9678c2c186dcc7db3cfb73?cid=83ecdeb585e1458d9a5586eb14617fbd',
+    track_number: 3,
+    type: 'track',
+    uri: 'spotify:track:6hYdhO1BF8V03tuF8pADKP' },
+  { album: 
+     { album_type: 'album',
+       artists: [Array],
+       available_markets: [Array],
+       external_urls: [Object],
+       href: 'https://api.spotify.com/v1/albums/5rOHrnrRomvSJhQLGVtfJ8',
+       id: '5rOHrnrRomvSJhQLGVtfJ8',
+       images: [Array],
+       name: 'Suicide Squad: The Album',
+       type: 'album',
+       uri: 'spotify:album:5rOHrnrRomvSJhQLGVtfJ8' },
+    artists: [ [Object], [Object], [Object], [Object], [Object], [Object] ],
+    available_markets: 
+     [ 'AD',
+       'AR',
+       'AT',
+       'AU',
+       'BE',
+       'BG',
+       'BO',
+       'BR',
+       'CA',
+       'CH',
+       'CL',
+       'CO',
+       'CR',
+       'CY',
+       'CZ',
+       'DE',
+       'DK',
+       'DO',
+       'EC',
+       'EE',
+       'ES',
+       'FI',
+       'FR',
+       'GB',
+       'GR',
+       'GT',
+       'HK',
+       'HN',
+       'HU',
+       'ID',
+       'IE',
+       'IS',
+       'IT',
+       'LI',
+       'LT',
+       'LU',
+       'LV',
+       'MC',
+       'MT',
+       'MX',
+       'MY',
+       'NI',
+       'NL',
+       'NO',
+       'NZ',
+       'PA',
+       'PE',
+       'PH',
+       'PL',
+       'PT',
+       'PY',
+       'SE',
+       'SG',
+       'SK',
+       'SV',
+       'TR',
+       'TW',
+       'US',
+       'UY' ],
+    disc_number: 1,
+    duration_ms: 243490,
+    explicit: true,
+    external_ids: { isrc: 'USAT21601893' },
+    external_urls: { spotify: 'https://open.spotify.com/track/7qUJQSNX9QNf46CC6FgH66' },
+    href: 'https://api.spotify.com/v1/tracks/7qUJQSNX9QNf46CC6FgH66',
+    id: '7qUJQSNX9QNf46CC6FgH66',
+    name: 'Sucker For Pain (with Wiz Khalifa, Imagine Dragons, Logic & Ty Dolla $ign feat. X Ambassadors)',
+    popularity: 73,
+    preview_url: 'https://p.scdn.co/mp3-preview/96f9689e58c4d6188cc269c0c2089036c3817a2e?cid=83ecdeb585e1458d9a5586eb14617fbd',
+    track_number: 2,
+    type: 'track',
+    uri: 'spotify:track:7qUJQSNX9QNf46CC6FgH66' },
+  { album: 
+     { album_type: 'single',
+       artists: [Array],
+       available_markets: [Array],
+       external_urls: [Object],
+       href: 'https://api.spotify.com/v1/albums/1wJ0LO5PnMZDTrWR2C7qQ8',
+       id: '1wJ0LO5PnMZDTrWR2C7qQ8',
+       images: [Array],
+       name: 'Shell Shocked (feat. Kill The Noise & Madsonik) [From "Teenage Mutant Ninja Turtles"]',
+       type: 'album',
+       uri: 'spotify:album:1wJ0LO5PnMZDTrWR2C7qQ8' },
+    artists: [ [Object], [Object], [Object], [Object], [Object] ],
+    available_markets: 
+     [ 'AD',
+       'AR',
+       'AT',
+       'AU',
+       'BE',
+       'BG',
+       'BO',
+       'BR',
+       'CA',
+       'CH',
+       'CL',
+       'CO',
+       'CR',
+       'CY',
+       'CZ',
+       'DE',
+       'DK',
+       'DO',
+       'EC',
+       'EE',
+       'ES',
+       'FI',
+       'FR',
+       'GB',
+       'GR',
+       'GT',
+       'HK',
+       'HN',
+       'HU',
+       'ID',
+       'IE',
+       'IS',
+       'IT',
+       'JP',
+       'LT',
+       'LU',
+       'LV',
+       'MC',
+       'MT',
+       'MX',
+       'MY',
+       'NI',
+       'NL',
+       'NO',
+       'NZ',
+       'PA',
+       'PE',
+       'PH',
+       'PL',
+       'PT',
+       'PY',
+       'SE',
+       'SG',
+       'SK',
+       'SV',
+       'TR',
+       'TW',
+       'US',
+       'UY' ],
+    disc_number: 1,
+    duration_ms: 206566,
+    explicit: false,
+    external_ids: { isrc: 'USAT21403010' },
+    external_urls: { spotify: 'https://open.spotify.com/track/7zBQRGpYImAdIZc97FNj3V' },
+    href: 'https://api.spotify.com/v1/tracks/7zBQRGpYImAdIZc97FNj3V',
+    id: '7zBQRGpYImAdIZc97FNj3V',
+    name: 'Shell Shocked (feat. Kill The Noise & Madsonik) - From "Teenage Mutant Ninja Turtles"',
+    popularity: 68,
+    preview_url: 'https://p.scdn.co/mp3-preview/26fa73b8c2e9ce91efb44fad48c5a38b2e48dc11?cid=83ecdeb585e1458d9a5586eb14617fbd',
+    track_number: 1,
+    type: 'track',
+    uri: 'spotify:track:7zBQRGpYImAdIZc97FNj3V' },
+  { album: 
+     { album_type: 'album',
+       artists: [Array],
+       available_markets: [Array],
+       external_urls: [Object],
+       href: 'https://api.spotify.com/v1/albums/71QyofYesSsRMwFOTafnhB',
+       id: '71QyofYesSsRMwFOTafnhB',
+       images: [Array],
+       name: 'Coloring Book',
+       type: 'album',
+       uri: 'spotify:album:71QyofYesSsRMwFOTafnhB' },
+    artists: [ [Object], [Object], [Object], [Object], [Object] ],
+    available_markets: 
+     [ 'AD',
+       'AR',
+       'AT',
+       'AU',
+       'BE',
+       'BG',
+       'BO',
+       'BR',
+       'CA',
+       'CH',
+       'CL',
+       'CO',
+       'CR',
+       'CY',
+       'CZ',
+       'DE',
+       'DK',
+       'DO',
+       'EC',
+       'EE',
+       'ES',
+       'FI',
+       'FR',
+       'GB',
+       'GR',
+       'GT',
+       'HK',
+       'HN',
+       'HU',
+       'ID',
+       'IE',
+       'IS',
+       'IT',
+       'JP',
+       'LI',
+       'LT',
+       'LU',
+       'LV',
+       'MC',
+       'MT',
+       'MX',
+       'MY',
+       'NI',
+       'NL',
+       'NO',
+       'NZ',
+       'PA',
+       'PE',
+       'PH',
+       'PL',
+       'PT',
+       'PY',
+       'SE',
+       'SG',
+       'SK',
+       'SV',
+       'TR',
+       'TW',
+       'US',
+       'UY' ],
+    disc_number: 1,
+    duration_ms: 230016,
+    explicit: true,
+    external_ids: { isrc: 'TCACO1667461' },
+    external_urls: { spotify: 'https://open.spotify.com/track/5IdQEHgtmj9th3OkfQKhf8' },
+    href: 'https://api.spotify.com/v1/tracks/5IdQEHgtmj9th3OkfQKhf8',
+    id: '5IdQEHgtmj9th3OkfQKhf8',
+    name: 'Blessings',
+    popularity: 69,
+    preview_url: 'https://p.scdn.co/mp3-preview/ca5047ad569d9860b850475f22cb482c8240e7a2?cid=83ecdeb585e1458d9a5586eb14617fbd',
+    track_number: 14,
+    type: 'track',
+    uri: 'spotify:track:5IdQEHgtmj9th3OkfQKhf8' },
+  { album: 
+     { album_type: 'album',
+       artists: [Array],
+       available_markets: [Array],
+       external_urls: [Object],
+       href: 'https://api.spotify.com/v1/albums/2yUhcn7kF408KjNVuMwV2P',
+       id: '2yUhcn7kF408KjNVuMwV2P',
+       images: [Array],
+       name: 'Sounds From The Other Side',
+       type: 'album',
+       uri: 'spotify:album:2yUhcn7kF408KjNVuMwV2P' },
+    artists: [ [Object], [Object] ],
+    available_markets: 
+     [ 'AD',
+       'AR',
+       'AT',
+       'AU',
+       'BE',
+       'BG',
+       'BO',
+       'BR',
+       'CA',
+       'CH',
+       'CL',
+       'CO',
+       'CR',
+       'CY',
+       'CZ',
+       'DE',
+       'DK',
+       'DO',
+       'EC',
+       'EE',
+       'ES',
+       'FI',
+       'FR',
+       'GB',
+       'GR',
+       'GT',
+       'HK',
+       'HN',
+       'HU',
+       'ID',
+       'IE',
+       'IS',
+       'IT',
+       'JP',
+       'LI',
+       'LT',
+       'LU',
+       'LV',
+       'MC',
+       'MT',
+       'MX',
+       'MY',
+       'NI',
+       'NL',
+       'NO',
+       'NZ',
+       'PA',
+       'PE',
+       'PH',
+       'PL',
+       'PT',
+       'PY',
+       'SE',
+       'SG',
+       'SK',
+       'SV',
+       'TR',
+       'TW',
+       'US',
+       'UY' ],
+    disc_number: 1,
+    duration_ms: 206240,
+    explicit: false,
+    external_ids: { isrc: 'USRC11701269' },
+    external_urls: { spotify: 'https://open.spotify.com/track/284b45rER2dZCBVCkCQNEk' },
+    href: 'https://api.spotify.com/v1/tracks/284b45rER2dZCBVCkCQNEk',
+    id: '284b45rER2dZCBVCkCQNEk',
+    name: 'One For Me',
+    popularity: 67,
+    preview_url: 'https://p.scdn.co/mp3-preview/a4f42926a953f9139d63422e1db9cae47e0449be?cid=83ecdeb585e1458d9a5586eb14617fbd',
+    track_number: 6,
+    type: 'track',
+    uri: 'spotify:track:284b45rER2dZCBVCkCQNEk' },
+  { album: 
+     { album_type: 'single',
+       artists: [Array],
+       available_markets: [Array],
+       external_urls: [Object],
+       href: 'https://api.spotify.com/v1/albums/3ztD4sCnTmP4ntaIoAJTwC',
+       id: '3ztD4sCnTmP4ntaIoAJTwC',
+       images: [Array],
+       name: 'Sign of the Times',
+       type: 'album',
+       uri: 'spotify:album:3ztD4sCnTmP4ntaIoAJTwC' },
+    artists: [ [Object], [Object] ],
+    available_markets: 
+     [ 'AD',
+       'AR',
+       'AT',
+       'AU',
+       'BE',
+       'BG',
+       'BO',
+       'BR',
+       'CA',
+       'CH',
+       'CL',
+       'CO',
+       'CR',
+       'CY',
+       'CZ',
+       'DE',
+       'DK',
+       'DO',
+       'EC',
+       'EE',
+       'ES',
+       'FI',
+       'FR',
+       'GB',
+       'GR',
+       'GT',
+       'HK',
+       'HN',
+       'HU',
+       'ID',
+       'IE',
+       'IS',
+       'IT',
+       'JP',
+       'LI',
+       'LT',
+       'LU',
+       'LV',
+       'MC',
+       'MT',
+       'MX',
+       'MY',
+       'NI',
+       'NL',
+       'NO',
+       'NZ',
+       'PA',
+       'PE',
+       'PH',
+       'PL',
+       'PT',
+       'PY',
+       'SE',
+       'SG',
+       'SK',
+       'SV',
+       'TR',
+       'TW',
+       'US',
+       'UY' ],
+    disc_number: 1,
+    duration_ms: 253269,
+    explicit: false,
+    external_ids: { isrc: 'USAT21701510' },
+    external_urls: { spotify: 'https://open.spotify.com/track/3h0RJYaohnvXg5SmWD1dZF' },
+    href: 'https://api.spotify.com/v1/tracks/3h0RJYaohnvXg5SmWD1dZF',
+    id: '3h0RJYaohnvXg5SmWD1dZF',
+    name: 'Sign of the Times',
+    popularity: 64,
+    preview_url: 'https://p.scdn.co/mp3-preview/547f1695e87f17b0b8deb67634d4ccadb75d22ae?cid=83ecdeb585e1458d9a5586eb14617fbd',
+    track_number: 1,
+    type: 'track',
+    uri: 'spotify:track:3h0RJYaohnvXg5SmWD1dZF' },
+  { album: 
+     { album_type: 'album',
+       artists: [Array],
+       available_markets: [Array],
+       external_urls: [Object],
+       href: 'https://api.spotify.com/v1/albums/7eFfp9r4A30ueN9A5EJbk2',
+       id: '7eFfp9r4A30ueN9A5EJbk2',
+       images: [Array],
+       name: 'GTTM: Goin Thru the Motions',
+       type: 'album',
+       uri: 'spotify:album:7eFfp9r4A30ueN9A5EJbk2' },
+    artists: [ [Object], [Object] ],
+    available_markets: 
+     [ 'AD',
+       'AR',
+       'AT',
+       'AU',
+       'BE',
+       'BG',
+       'BO',
+       'BR',
+       'CA',
+       'CH',
+       'CL',
+       'CO',
+       'CR',
+       'CY',
+       'CZ',
+       'DE',
+       'DK',
+       'DO',
+       'EC',
+       'EE',
+       'ES',
+       'FI',
+       'FR',
+       'GB',
+       'GR',
+       'GT',
+       'HK',
+       'HN',
+       'HU',
+       'ID',
+       'IE',
+       'IS',
+       'IT',
+       'JP',
+       'LI',
+       'LT',
+       'LU',
+       'LV',
+       'MC',
+       'MT',
+       'MX',
+       'MY',
+       'NI',
+       'NL',
+       'NO',
+       'NZ',
+       'PA',
+       'PE',
+       'PH',
+       'PL',
+       'PT',
+       'PY',
+       'SE',
+       'SG',
+       'SK',
+       'SV',
+       'TR',
+       'TW',
+       'US',
+       'UY' ],
+    disc_number: 1,
+    duration_ms: 210826,
+    explicit: true,
+    external_ids: { isrc: 'USUYG1121852' },
+    external_urls: { spotify: 'https://open.spotify.com/track/3vSrDgfNhlQRwKXJpl1DYo' },
+    href: 'https://api.spotify.com/v1/tracks/3vSrDgfNhlQRwKXJpl1DYo',
+    id: '3vSrDgfNhlQRwKXJpl1DYo',
+    name: 'Hanging Up My Jersey',
+    popularity: 60,
+    preview_url: 'https://p.scdn.co/mp3-preview/d9ded55ec6e478c9b68eb206e9f5714440c2c693?cid=83ecdeb585e1458d9a5586eb14617fbd',
+    track_number: 8,
+    type: 'track',
+    uri: 'spotify:track:3vSrDgfNhlQRwKXJpl1DYo' },
+  { album: 
+     { album_type: 'album',
+       artists: [Array],
+       available_markets: [Array],
+       external_urls: [Object],
+       href: 'https://api.spotify.com/v1/albums/0RHX9XECH8IVI3LNgWDpmQ',
+       id: '0RHX9XECH8IVI3LNgWDpmQ',
+       images: [Array],
+       name: 'A Rush Of Blood To The Head',
+       type: 'album',
+       uri: 'spotify:album:0RHX9XECH8IVI3LNgWDpmQ' },
+    artists: [ [Object] ],
+    available_markets: 
+     [ 'AD',
+       'AR',
+       'AT',
+       'AU',
+       'BE',
+       'BG',
+       'BO',
+       'BR',
+       'CA',
+       'CH',
+       'CL',
+       'CO',
+       'CR',
+       'CY',
+       'CZ',
+       'DE',
+       'DK',
+       'DO',
+       'EC',
+       'EE',
+       'ES',
+       'FI',
+       'FR',
+       'GB',
+       'GR',
+       'GT',
+       'HK',
+       'HN',
+       'HU',
+       'ID',
+       'IE',
+       'IS',
+       'IT',
+       'JP',
+       'LI',
+       'LT',
+       'LU',
+       'LV',
+       'MC',
+       'MT',
+       'MX',
+       'MY',
+       'NI',
+       'NL',
+       'NO',
+       'NZ',
+       'PA',
+       'PE',
+       'PH',
+       'PL',
+       'PT',
+       'PY',
+       'SE',
+       'SG',
+       'SK',
+       'SV',
+       'TR',
+       'TW',
+       'US',
+       'UY' ],
+    disc_number: 1,
+    duration_ms: 331133,
+    explicit: false,
+    external_ids: { isrc: 'GBAYE0200776' },
+    external_urls: { spotify: 'https://open.spotify.com/track/4bPkBHKLKd9WHizsvM2zV3' },
+    href: 'https://api.spotify.com/v1/tracks/4bPkBHKLKd9WHizsvM2zV3',
+    id: '4bPkBHKLKd9WHizsvM2zV3',
+    name: 'Warning Sign',
+    popularity: 63,
+    preview_url: 'https://p.scdn.co/mp3-preview/aa7d87a8e2ac9aa7261c7640548a18930572043d?cid=83ecdeb585e1458d9a5586eb14617fbd',
+    track_number: 8,
+    type: 'track',
+    uri: 'spotify:track:4bPkBHKLKd9WHizsvM2zV3' },
+  { album: 
+     { album_type: 'album',
+       artists: [Array],
+       available_markets: [Array],
+       external_urls: [Object],
+       href: 'https://api.spotify.com/v1/albums/5UwIyIyFzkM7wKeGtRJPgB',
+       id: '5UwIyIyFzkM7wKeGtRJPgB',
+       images: [Array],
+       name: 'The Sign (US Album) [Remastered]',
+       type: 'album',
+       uri: 'spotify:album:5UwIyIyFzkM7wKeGtRJPgB' },
+    artists: [ [Object] ],
+    available_markets: 
+     [ 'AD',
+       'AR',
+       'AT',
+       'AU',
+       'BE',
+       'BG',
+       'BO',
+       'BR',
+       'CA',
+       'CH',
+       'CL',
+       'CO',
+       'CR',
+       'CY',
+       'CZ',
+       'DE',
+       'DK',
+       'DO',
+       'EC',
+       'EE',
+       'ES',
+       'FI',
+       'FR',
+       'GB',
+       'GR',
+       'GT',
+       'HK',
+       'HN',
+       'HU',
+       'ID',
+       'IE',
+       'IS',
+       'IT',
+       'JP',
+       'LI',
+       'LT',
+       'LU',
+       'LV',
+       'MC',
+       'MT',
+       'MX',
+       'MY',
+       'NI',
+       'NL',
+       'NO',
+       'NZ',
+       'PA',
+       'PE',
+       'PH',
+       'PL',
+       'PT',
+       'PY',
+       'SE',
+       'SG',
+       'SK',
+       'SV',
+       'TR',
+       'TW',
+       'US',
+       'UY' ],
+    disc_number: 1,
+    duration_ms: 211213,
+    explicit: false,
+    external_ids: { isrc: 'SEVJH0803401' },
+    external_urls: { spotify: 'https://open.spotify.com/track/6kWJvPfC4DgUpRsXKNa9z9' },
+    href: 'https://api.spotify.com/v1/tracks/6kWJvPfC4DgUpRsXKNa9z9',
+    id: '6kWJvPfC4DgUpRsXKNa9z9',
+    name: 'All That She Wants',
+    popularity: 66,
+    preview_url: 'https://p.scdn.co/mp3-preview/b176774bc04182501c2d5d201afda143b1193f31?cid=83ecdeb585e1458d9a5586eb14617fbd',
+    track_number: 1,
+    type: 'track',
+    uri: 'spotify:track:6kWJvPfC4DgUpRsXKNa9z9' },
+  { album: 
+     { album_type: 'single',
+       artists: [Array],
+       available_markets: [Array],
+       external_urls: [Object],
+       href: 'https://api.spotify.com/v1/albums/3p9GkUQ1DYdesCz6FPCz3B',
+       id: '3p9GkUQ1DYdesCz6FPCz3B',
+       images: [Array],
+       name: 'Blasé (feat. Future & Rae Sremmurd) [Remixes]',
+       type: 'album',
+       uri: 'spotify:album:3p9GkUQ1DYdesCz6FPCz3B' },
+    artists: [ [Object], [Object], [Object], [Object] ],
+    available_markets: 
+     [ 'AD',
+       'AR',
+       'AT',
+       'AU',
+       'BE',
+       'BG',
+       'BO',
+       'BR',
+       'CA',
+       'CH',
+       'CL',
+       'CO',
+       'CR',
+       'CY',
+       'CZ',
+       'DE',
+       'DK',
+       'DO',
+       'EC',
+       'EE',
+       'ES',
+       'FI',
+       'FR',
+       'GB',
+       'GR',
+       'GT',
+       'HK',
+       'HN',
+       'HU',
+       'ID',
+       'IE',
+       'IS',
+       'IT',
+       'JP',
+       'LI',
+       'LT',
+       'LU',
+       'LV',
+       'MC',
+       'MT',
+       'MX',
+       'MY',
+       'NI',
+       'NL',
+       'NO',
+       'NZ',
+       'PA',
+       'PE',
+       'PH',
+       'PL',
+       'PT',
+       'PY',
+       'SE',
+       'SG',
+       'SK',
+       'SV',
+       'TR',
+       'TW',
+       'US',
+       'UY' ],
+    disc_number: 1,
+    duration_ms: 228750,
+    explicit: true,
+    external_ids: { isrc: 'USAT21601209' },
+    external_urls: { spotify: 'https://open.spotify.com/track/2NAZcL9tLUkdMMb5v3xFVG' },
+    href: 'https://api.spotify.com/v1/tracks/2NAZcL9tLUkdMMb5v3xFVG',
+    id: '2NAZcL9tLUkdMMb5v3xFVG',
+    name: 'Blasé (feat. Future & Rae Sremmurd) - Louis The Child Remix',
+    popularity: 59,
+    preview_url: 'https://p.scdn.co/mp3-preview/e5c3f24261752767005a5d10ae251f3a52e84319?cid=83ecdeb585e1458d9a5586eb14617fbd',
+    track_number: 1,
+    type: 'track',
+    uri: 'spotify:track:2NAZcL9tLUkdMMb5v3xFVG' },
+  { album: 
+     { album_type: 'album',
+       artists: [Array],
+       available_markets: [Array],
+       external_urls: [Object],
+       href: 'https://api.spotify.com/v1/albums/0ct1bK2jijAkf6IxP9B0st',
+       id: '0ct1bK2jijAkf6IxP9B0st',
+       images: [Array],
+       name: 'Peace Is The Mission (Extended)',
+       type: 'album',
+       uri: 'spotify:album:0ct1bK2jijAkf6IxP9B0st' },
+    artists: [ [Object], [Object], [Object], [Object], [Object] ],
+    available_markets: [ 'CA', 'MX', 'US' ],
+    disc_number: 1,
+    duration_ms: 186447,
+    explicit: true,
+    external_ids: { isrc: 'QMUY41500191' },
+    external_urls: { spotify: 'https://open.spotify.com/track/2nxUXNkrivJIBvrNWqud9s' },
+    href: 'https://api.spotify.com/v1/tracks/2nxUXNkrivJIBvrNWqud9s',
+    id: '2nxUXNkrivJIBvrNWqud9s',
+    name: 'Boom',
+    popularity: 60,
+    preview_url: 'https://p.scdn.co/mp3-preview/c75296ad381abcd4ad558189e588dd698e3c0eb5?cid=83ecdeb585e1458d9a5586eb14617fbd',
+    track_number: 11,
+    type: 'track',
+    uri: 'spotify:track:2nxUXNkrivJIBvrNWqud9s' },
+  { album: 
+     { album_type: 'compilation',
+       artists: [Array],
+       available_markets: [Array],
+       external_urls: [Object],
+       href: 'https://api.spotify.com/v1/albums/0nQFgMfnmWrcWDOQqIgJL7',
+       id: '0nQFgMfnmWrcWDOQqIgJL7',
+       images: [Array],
+       name: 'Greatest Hits',
+       type: 'album',
+       uri: 'spotify:album:0nQFgMfnmWrcWDOQqIgJL7' },
+    artists: [ [Object] ],
+    available_markets: 
+     [ 'AD',
+       'AR',
+       'AT',
+       'AU',
+       'BE',
+       'BG',
+       'BO',
+       'BR',
+       'CA',
+       'CH',
+       'CL',
+       'CO',
+       'CR',
+       'CY',
+       'CZ',
+       'DE',
+       'DK',
+       'DO',
+       'EC',
+       'EE',
+       'ES',
+       'FI',
+       'FR',
+       'GB',
+       'GR',
+       'GT',
+       'HK',
+       'HN',
+       'HU',
+       'ID',
+       'IE',
+       'IS',
+       'IT',
+       'JP',
+       'LI',
+       'LT',
+       'LU',
+       'LV',
+       'MC',
+       'MT',
+       'MX',
+       'MY',
+       'NI',
+       'NL',
+       'NO',
+       'NZ',
+       'PA',
+       'PE',
+       'PH',
+       'PL',
+       'PT',
+       'PY',
+       'SE',
+       'SG',
+       'SK',
+       'SV',
+       'TR',
+       'TW',
+       'US',
+       'UY' ],
+    disc_number: 1,
+    duration_ms: 189786,
+    explicit: false,
+    external_ids: { isrc: 'SEVJH0803404' },
+    external_urls: { spotify: 'https://open.spotify.com/track/3DYVWvPh3kGwPasp7yjahc' },
+    href: 'https://api.spotify.com/v1/tracks/3DYVWvPh3kGwPasp7yjahc',
+    id: '3DYVWvPh3kGwPasp7yjahc',
+    name: 'The Sign',
+    popularity: 61,
+    preview_url: 'https://p.scdn.co/mp3-preview/5ca0168d6b58e0f993b2b741af90ecc7c9b16893?cid=83ecdeb585e1458d9a5586eb14617fbd',
+    track_number: 1,
+    type: 'track',
+    uri: 'spotify:track:3DYVWvPh3kGwPasp7yjahc' } ]
+@hcardenas:liri-node-app$ node liri.js 
+this is loaded
+{ album: 
+   { album_type: 'single',
+     artists: [ [Object] ],
+     available_markets: 
+      [ 'AD',
+        'AR',
+        'AT',
+        'AU',
+        'BE',
+        'BG',
+        'BO',
+        'BR',
+        'CA',
+        'CH',
+        'CL',
+        'CO',
+        'CR',
+        'CY',
+        'CZ',
+        'DE',
+        'DK',
+        'DO',
+        'EC',
+        'EE',
+        'ES',
+        'FI',
+        'FR',
+        'GB',
+        'GR',
+        'GT',
+        'HK',
+        'HN',
+        'HU',
+        'ID',
+        'IE',
+        'IS',
+        'IT',
+        'JP',
+        'LI',
+        'LT',
+        'LU',
+        'LV',
+        'MC',
+        'MT',
+        'MX',
+        'MY',
+        'NI',
+        'NL',
+        'NO',
+        'NZ',
+        'PA',
+        'PE',
+        'PH',
+        'PL',
+        'PT',
+        'PY',
+        'SG',
+        'SK',
+        'SV',
+        'TR',
+        'TW',
+        'US',
+        'UY' ],
+     external_urls: { spotify: 'https://open.spotify.com/album/6YDkzHVTEzMXZOVd1r5NqR' },
+     href: 'https://api.spotify.com/v1/albums/6YDkzHVTEzMXZOVd1r5NqR',
+     id: '6YDkzHVTEzMXZOVd1r5NqR',
+     images: [ [Object], [Object], [Object] ],
+     name: 'Sign of the Times',
+     type: 'album',
+     uri: 'spotify:album:6YDkzHVTEzMXZOVd1r5NqR' },
+  artists: 
+   [ { external_urls: [Object],
+       href: 'https://api.spotify.com/v1/artists/6KImCVD70vtIoJWnq6nGn3',
+       id: '6KImCVD70vtIoJWnq6nGn3',
+       name: 'Harry Styles',
+       type: 'artist',
+       uri: 'spotify:artist:6KImCVD70vtIoJWnq6nGn3' } ],
+  available_markets: 
+   [ 'AD',
+     'AR',
+     'AT',
+     'AU',
+     'BE',
+     'BG',
+     'BO',
+     'BR',
+     'CA',
+     'CH',
+     'CL',
+     'CO',
+     'CR',
+     'CY',
+     'CZ',
+     'DE',
+     'DK',
+     'DO',
+     'EC',
+     'EE',
+     'ES',
+     'FI',
+     'FR',
+     'GB',
+     'GR',
+     'GT',
+     'HK',
+     'HN',
+     'HU',
+     'ID',
+     'IE',
+     'IS',
+     'IT',
+     'JP',
+     'LI',
+     'LT',
+     'LU',
+     'LV',
+     'MC',
+     'MT',
+     'MX',
+     'MY',
+     'NI',
+     'NL',
+     'NO',
+     'NZ',
+     'PA',
+     'PE',
+     'PH',
+     'PL',
+     'PT',
+     'PY',
+     'SG',
+     'SK',
+     'SV',
+     'TR',
+     'TW',
+     'US',
+     'UY' ],
+  disc_number: 1,
+  duration_ms: 340706,
+  explicit: false,
+  external_ids: { isrc: 'USSM11703595' },
+  external_urls: { spotify: 'https://open.spotify.com/track/5ELRkzdzz0HvGpMDlfZHkV' },
+  href: 'https://api.spotify.com/v1/tracks/5ELRkzdzz0HvGpMDlfZHkV',
+  id: '5ELRkzdzz0HvGpMDlfZHkV',
+  name: 'Sign of the Times',
+  popularity: 86,
+  preview_url: 'https://p.scdn.co/mp3-preview/9801b9239ad1b833f1317574ee55b9d7b8426ff1?cid=83ecdeb585e1458d9a5586eb14617fbd',
+  track_number: 1,
+  type: 'track',
+  uri: 'spotify:track:5ELRkzdzz0HvGpMDlfZHkV' }
+@hcardenas:liri-node-app$ node liri.js 
+this is loaded
+/Users/hcardenas/Documents/UCF-Cooding-Boot-Camp/liri-node-app/liri.js:17
+	switch(action) {
+	       ^
+
+ReferenceError: action is not defined
+    at main (/Users/hcardenas/Documents/UCF-Cooding-Boot-Camp/liri-node-app/liri.js:17:9)
+    at Object.<anonymous> (/Users/hcardenas/Documents/UCF-Cooding-Boot-Camp/liri-node-app/liri.js:12:2)
+    at Module._compile (module.js:569:30)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:503:32)
+    at tryModuleLoad (module.js:466:12)
+    at Function.Module._load (module.js:458:3)
+    at Function.Module.runMain (module.js:605:10)
+    at startup (bootstrap_node.js:158:16)
+    at bootstrap_node.js:575:3
+@hcardenas:liri-node-app$ node liri.js 
+this is loaded
+{ album: 
+   { album_type: 'single',
+     artists: [ [Object] ],
+     available_markets: 
+      [ 'AD',
+        'AR',
+        'AT',
+        'AU',
+        'BE',
+        'BG',
+        'BO',
+        'BR',
+        'CA',
+        'CH',
+        'CL',
+        'CO',
+        'CR',
+        'CY',
+        'CZ',
+        'DE',
+        'DK',
+        'DO',
+        'EC',
+        'EE',
+        'ES',
+        'FI',
+        'FR',
+        'GB',
+        'GR',
+        'GT',
+        'HK',
+        'HN',
+        'HU',
+        'ID',
+        'IE',
+        'IS',
+        'IT',
+        'JP',
+        'LI',
+        'LT',
+        'LU',
+        'LV',
+        'MC',
+        'MT',
+        'MX',
+        'MY',
+        'NI',
+        'NL',
+        'NO',
+        'NZ',
+        'PA',
+        'PE',
+        'PH',
+        'PL',
+        'PT',
+        'PY',
+        'SG',
+        'SK',
+        'SV',
+        'TR',
+        'TW',
+        'US',
+        'UY' ],
+     external_urls: { spotify: 'https://open.spotify.com/album/6YDkzHVTEzMXZOVd1r5NqR' },
+     href: 'https://api.spotify.com/v1/albums/6YDkzHVTEzMXZOVd1r5NqR',
+     id: '6YDkzHVTEzMXZOVd1r5NqR',
+     images: [ [Object], [Object], [Object] ],
+     name: 'Sign of the Times',
+     type: 'album',
+     uri: 'spotify:album:6YDkzHVTEzMXZOVd1r5NqR' },
+  artists: 
+   [ { external_urls: [Object],
+       href: 'https://api.spotify.com/v1/artists/6KImCVD70vtIoJWnq6nGn3',
+       id: '6KImCVD70vtIoJWnq6nGn3',
+       name: 'Harry Styles',
+       type: 'artist',
+       uri: 'spotify:artist:6KImCVD70vtIoJWnq6nGn3' } ],
+  available_markets: 
+   [ 'AD',
+     'AR',
+     'AT',
+     'AU',
+     'BE',
+     'BG',
+     'BO',
+     'BR',
+     'CA',
+     'CH',
+     'CL',
+     'CO',
+     'CR',
+     'CY',
+     'CZ',
+     'DE',
+     'DK',
+     'DO',
+     'EC',
+     'EE',
+     'ES',
+     'FI',
+     'FR',
+     'GB',
+     'GR',
+     'GT',
+     'HK',
+     'HN',
+     'HU',
+     'ID',
+     'IE',
+     'IS',
+     'IT',
+     'JP',
+     'LI',
+     'LT',
+     'LU',
+     'LV',
+     'MC',
+     'MT',
+     'MX',
+     'MY',
+     'NI',
+     'NL',
+     'NO',
+     'NZ',
+     'PA',
+     'PE',
+     'PH',
+     'PL',
+     'PT',
+     'PY',
+     'SG',
+     'SK',
+     'SV',
+     'TR',
+     'TW',
+     'US',
+     'UY' ],
+  disc_number: 1,
+  duration_ms: 340706,
+  explicit: false,
+  external_ids: { isrc: 'USSM11703595' },
+  external_urls: { spotify: 'https://open.spotify.com/track/5ELRkzdzz0HvGpMDlfZHkV' },
+  href: 'https://api.spotify.com/v1/tracks/5ELRkzdzz0HvGpMDlfZHkV',
+  id: '5ELRkzdzz0HvGpMDlfZHkV',
+  name: 'Sign of the Times',
+  popularity: 86,
+  preview_url: 'https://p.scdn.co/mp3-preview/9801b9239ad1b833f1317574ee55b9d7b8426ff1?cid=83ecdeb585e1458d9a5586eb14617fbd',
+  track_number: 1,
+  type: 'track',
+  uri: 'spotify:track:5ELRkzdzz0HvGpMDlfZHkV' }
+@hcardenas:liri-node-app$ node liri.js 
+this is loaded
+{ tracks: 
+   { href: 'https://api.spotify.com/v1/search?query=The+Sign&type=track&offset=0&limit=20',
+     items: 
+      [ [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object] ],
+     limit: 20,
+     next: 'https://api.spotify.com/v1/search?query=The+Sign&type=track&offset=20&limit=20',
+     offset: 0,
+     previous: null,
+     total: 14509 } }
+@hcardenas:liri-node-app$ node liri.js 
+this is loaded
+he transactions possible are:
+
+  * 'total' - this should tally up all of the money in the bank balance and display it for the user.
+
+  * 'deposit <number>' - this should add a positive amount to the bank balance. (No need to display the total here)
+
+  * 'withdraw <number>' - this should add a negative amount to the bank balance. (No need to display the total here)
+
+  * 'lotto' - this should subtract an amount from the bank balance, but if a random number is hit it should add back a larger amount into the bank balance.
+@hcardenas:liri-node-app$ node liri.js 
+this is loaded
+he transactions possible are:
+  * 'my-tweets' - This will show your last 20 tweets and when they were created at in your terminal/bash window.
+  * 'spotify-this-song <song?>' - This will show the following information about the song in your terminal/bash window
+		-Artist(s)
+		-The song's name
+		-A preview link of the song from Spotify
+		-The album that the song is from
+		-If no song is provided then your program will default to "The Sign" by Ace of Base.
+  * 'movie-this <movie?>' - This will output the following information to your terminal/bash window:
+		-Title of the movie.
+		-Year the movie came out.
+		-IMDB Rating of the movie.
+		-Rotten Tomatoes Rating of the movie.
+		-Country where the movie was produced.
+		-Language of the movie.
+		-Plot of the movie.
+		-Actors in the movie.
+		-If the user doesn't type a movie in, the program will output data for the movie 'Mr. Nobody.
+  * 'do-what-it-says' - It should run spotify-this-song for "I Want it That Way," as follows the text in random.txt.
+@hcardenas:liri-node-app$ node liri.js 
+this is loaded
+he transactions possible are:
+  * 'my-tweets' - This will show your last 20 tweets and when they were created 
+  	 at in your terminal/bash window.
+  * 'spotify-this-song <song?>' - This will show the following information about 
+  	 the song in your terminal/bash window
+		-Artist(s)
+		-The song's name
+		-A preview link of the song from Spotify
+		-The album that the song is from
+		-If no song is provided then your program will default to "The Sign" by Ace of Base.
+  * 'movie-this <movie?>' - This will output the following information to your 
+  	 terminal/bash window:
+		-Title of the movie.
+		-Year the movie came out.
+		-IMDB Rating of the movie.
+		-Rotten Tomatoes Rating of the movie.
+		-Country where the movie was produced.
+		-Language of the movie.
+		-Plot of the movie.
+		-Actors in the movie.
+		-If the user doesn't type a movie in, the program will output data for 
+		 the movie 'Mr. Nobody.
+  * 'do-what-it-says' - It should run spotify-this-song for "I Want it That Way," 
+  	 as follows the text in random.txt.
+@hcardenas:liri-node-app$ node liri.js 
+this is loaded
+he transactions possible are:
+* 'my-tweets' - This will show your last 20 tweets and when they were created 
+	 at in your terminal/bash window.
+* 'spotify-this-song <song?>' - This will show the following information about 
+	 the song in your terminal/bash window
+	-Artist(s)
+	-The song's name
+	-A preview link of the song from Spotify
+	-The album that the song is from
+	-If no song is provided then your program will default to "The Sign" by Ace of Base.
+* 'movie-this <movie?>' - This will output the following information to your 
+	 terminal/bash window:
+	-Title of the movie.
+	-Year the movie came out.
+	-IMDB Rating of the movie.
+	-Rotten Tomatoes Rating of the movie.
+	-Country where the movie was produced.
+	-Language of the movie.
+	-Plot of the movie.
+	-Actors in the movie.
+	-If the user doesn't type a movie in, the program will output data for 
+	 the movie 'Mr. Nobody.
+* 'do-what-it-says' - It should run spotify-this-song for "I Want it That Way," 
+	 as follows the text in random.txt.
+@hcardenas:liri-node-app$ node liri.js 
+this is loaded
+he transactions possible are:
+* 'my-tweets' - This will show your last 20 tweets and when they were created 
+   at in your terminal/bash window.
+* 'spotify-this-song <song?>' - This will show the following information about 
+   the song in your terminal/bash window
+	-Artist(s)
+	-The song's name
+	-A preview link of the song from Spotify
+	-The album that the song is from
+	-If no song is provided then your program will default to "The Sign" by Ace of Base.
+* 'movie-this <movie?>' - This will output the following information to your 
+   terminal/bash window:
+	-Title of the movie.
+	-Year the movie came out.
+	-IMDB Rating of the movie.
+	-Rotten Tomatoes Rating of the movie.
+	-Country where the movie was produced.
+	-Language of the movie.
+	-Plot of the movie.
+	-Actors in the movie.
+	-If the user doesn't type a movie in, the program will output data for 
+	 the movie 'Mr. Nobody.
+* 'do-what-it-says' - It should run spotify-this-song for "I Want it That Way," 
+   as follows the text in random.txt.
+@hcardenas:liri-node-app$ node liri.js asd
+this is loaded
+{ tracks: 
+   { href: 'https://api.spotify.com/v1/search?query=The+Sign&type=track&offset=0&limit=20',
+     items: 
+      [ [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object] ],
+     limit: 20,
+     next: 'https://api.spotify.com/v1/search?query=The+Sign&type=track&offset=20&limit=20',
+     offset: 0,
+     previous: null,
+     total: 14509 } }
+@hcardenas:liri-node-app$ node liri.js asd
+this is loaded
+/Users/hcardenas/Documents/UCF-Cooding-Boot-Camp/liri-node-app/liri.js:22
+	request("http://www.omdbapi.com/?apikey=40e9cece&s=${movieName}", function(error, response, body) {
+	^
+
+ReferenceError: request is not defined
+    at movie_func (/Users/hcardenas/Documents/UCF-Cooding-Boot-Camp/liri-node-app/liri.js:22:2)
+    at Object.<anonymous> (/Users/hcardenas/Documents/UCF-Cooding-Boot-Camp/liri-node-app/liri.js:16:1)
+    at Module._compile (module.js:569:30)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:503:32)
+    at tryModuleLoad (module.js:466:12)
+    at Function.Module._load (module.js:458:3)
+    at Function.Module.runMain (module.js:605:10)
+    at startup (bootstrap_node.js:158:16)
+    at bootstrap_node.js:575:3
+@hcardenas:liri-node-app$ node liri.js Mr.Nobody
+this is loaded
+/Users/hcardenas/Documents/UCF-Cooding-Boot-Camp/liri-node-app/liri.js:22
+	request("http://www.omdbapi.com/?apikey=40e9cece&s=${movieName}", function(error, response, body) {
+	^
+
+ReferenceError: request is not defined
+    at movie_func (/Users/hcardenas/Documents/UCF-Cooding-Boot-Camp/liri-node-app/liri.js:22:2)
+    at Object.<anonymous> (/Users/hcardenas/Documents/UCF-Cooding-Boot-Camp/liri-node-app/liri.js:16:1)
+    at Module._compile (module.js:569:30)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:503:32)
+    at tryModuleLoad (module.js:466:12)
+    at Function.Module._load (module.js:458:3)
+    at Function.Module.runMain (module.js:605:10)
+    at startup (bootstrap_node.js:158:16)
+    at bootstrap_node.js:575:3
+@hcardenas:liri-node-app$ npm install request
+npm WARN saveError ENOENT: no such file or directory, open '/Users/hcardenas/Documents/UCF-Cooding-Boot-Camp/liri-node-app/package.json'
+npm WARN enoent ENOENT: no such file or directory, open '/Users/hcardenas/Documents/UCF-Cooding-Boot-Camp/liri-node-app/package.json'
+npm WARN liri-node-app No description
+npm WARN liri-node-app No repository field.
+npm WARN liri-node-app No README data
+npm WARN liri-node-app No license field.
+
++ request@2.81.0
+updated 1 package in 1.021s
+@hcardenas:liri-node-app$ node liri.js Mr.Nobody
+this is loaded
+/Users/hcardenas/Documents/UCF-Cooding-Boot-Camp/liri-node-app/liri.js:22
+	request("http://www.omdbapi.com/?apikey=40e9cece&s=${movieName}", function(error, response, body) {
+	^
+
+ReferenceError: request is not defined
+    at movie_func (/Users/hcardenas/Documents/UCF-Cooding-Boot-Camp/liri-node-app/liri.js:22:2)
+    at Object.<anonymous> (/Users/hcardenas/Documents/UCF-Cooding-Boot-Camp/liri-node-app/liri.js:16:1)
+    at Module._compile (module.js:569:30)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:503:32)
+    at tryModuleLoad (module.js:466:12)
+    at Function.Module._load (module.js:458:3)
+    at Function.Module.runMain (module.js:605:10)
+    at startup (bootstrap_node.js:158:16)
+    at bootstrap_node.js:575:3
+@hcardenas:liri-node-app$ node liri.js Mr.Nobody
+this is loaded
+{"Response":"False","Error":"Movie not found!"}
+@hcardenas:liri-node-app$ node liri.js titanic
+this is loaded
+{"Response":"False","Error":"Movie not found!"}
+@hcardenas:liri-node-app$ node liri.js 'star wars'
+this is loaded
+{"Response":"False","Error":"Movie not found!"}
+@hcardenas:liri-node-app$ node liri.js 'star wars'
+this is loaded
+Mr. Nobody
+{"Response":"False","Error":"Movie not found!"}
+@hcardenas:liri-node-app$ node liri.js 'star wars'
+this is loaded
+Mr.Nobody
+{"Response":"False","Error":"Movie not found!"}
+@hcardenas:liri-node-app$ node liri.js 'star wars'
+\this is loaded
+[ '/usr/local/Cellar/node/8.1.4/bin/node',
+  '/Users/hcardenas/Documents/UCF-Cooding-Boot-Camp/liri-node-app/liri.js',
+  'star wars' ]
+Mr.Nobody
+{"Response":"False","Error":"Movie not found!"}
+@hcardenas:liri-node-app$ node liri.js movie-this 'star wars'
